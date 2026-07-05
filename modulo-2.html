@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Módulo 2 · Capacidades do Microsoft Entra ID — SC-900</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="modulo-2.css" />
+</head>
+<body>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="glow glow--1" aria-hidden="true"></div>
+  <div class="glow glow--2" aria-hidden="true"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="nav">
+    <a href="index.html" class="nav__brand">
+      <div class="nav__logo">
+        <svg viewBox="0 0 23 23" fill="none" aria-hidden="true">
+          <rect x="1" y="1" width="9.5" height="9.5" fill="#F25022"/>
+          <rect x="12.5" y="1" width="9.5" height="9.5" fill="#7FBA00"/>
+          <rect x="1" y="12.5" width="9.5" height="9.5" fill="#00A4EF"/>
+          <rect x="12.5" y="12.5" width="9.5" height="9.5" fill="#FFB900"/>
+        </svg>
+      </div>
+      <div class="nav__title">
+        <strong>SC-900</strong>
+        <span>Módulo 2 · Entra ID</span>
+      </div>
+    </a>
+    <nav class="nav__links">
+      <a href="#aula-1">Identidades</a>
+      <a href="#aula-2">AD vs Entra</a>
+      <a href="#aula-3">Autenticação</a>
+      <a href="#aula-4">Cond. Access</a>
+      <a href="#aula-5">Governança</a>
+      <a href="#aula-6">B2B/B2C</a>
+      <a href="#quiz">Quiz</a>
+    </nav>
+  </header>
+
+  <!-- ===================== HERO DO MÓDULO ===================== -->
+  <section class="m-hero">
+    <div class="m-hero__inner">
+      <span class="badge reveal"><span class="badge__pulse"></span>Módulo 02 · 25–30% da prova</span>
+      <h1 class="m-hero__title reveal">
+        Capacidades do<br />Microsoft Entra ID
+      </h1>
+      <p class="m-hero__subtitle reveal">
+        A <strong>identidade é o novo perímetro de segurança</strong>. Aqui você vai dominar o coração da SC-900:
+        como o Entra ID gerencia quem acessa o quê, quando e como. Vamos do simples ao sênior. 🚀
+      </p>
+
+      <div class="m-hero__path reveal" id="lessonPath">
+        <a href="#aula-1" class="path-dot" data-lesson="1"><span>1</span><em>Tipos de Identidade</em></a>
+        <a href="#aula-2" class="path-dot" data-lesson="2"><span>2</span><em>Entra ID vs AD</em></a>
+        <a href="#aula-3" class="path-dot" data-lesson="3"><span>3</span><em>Autenticação &amp; MFA</em></a>
+        <a href="#aula-4" class="path-dot" data-lesson="4"><span>4</span><em>Acesso Condicional</em></a>
+        <a href="#aula-5" class="path-dot" data-lesson="5"><span>5</span><em>Governança &amp; PIM</em></a>
+        <a href="#aula-6" class="path-dot" data-lesson="6"><span>6</span><em>B2B &amp; B2C</em></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROGRESSO DO MÓDULO ===================== -->
+  <div class="m-progress-wrap">
+    <div class="progress-card reveal">
+      <div class="progress-card__head">
+        <h2>👤 Seu progresso neste módulo</h2>
+        <span class="progress-card__value" id="moduleProgress">0%</span>
+      </div>
+      <div class="progress-card__bar">
+        <div class="progress-card__fill" id="moduleFill"></div>
+      </div>
+      <p class="m-progress-hint" id="moduleHint">Leia cada aula e marque como concluída 👇</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       AULA 1 — TIPOS DE IDENTIDADE
+       ============================================================ -->
+  <section class="lesson" id="aula-1">
+    <div class="lesson__head reveal">
+      <span class="lesson__num">Aula 01</span>
+      <h2>🏢 Tipos de Identidade no Entra ID</h2>
+      <p class="lesson__intro">Antes de autenticar ninguém, precisamos entender QUEM pode existir no diretório. Conheça os "moradores" do Entra ID.</p>
+    </div>
+
+    <div class="lesson__body">
+      <div class="story reveal">
+        <div class="story__icon">🏢</div>
+        <h3>Imagine assim...</h3>
+        <p>
+          O Microsoft Entra ID é como um <strong>grande prédio corporativo</strong>. Dentro dele moram pessoas diferentes,
+          cada uma com um papel. O <strong>tenant</strong> é o próprio prédio (sua organização). Os <strong>usuários</strong>
+          são os moradores. Os <strong>grupos</strong> são os sindicos/sindicatos que reúnem moradores parecidos.
+          Os <strong>dispositivos</strong> são as chaves de cada apartamento. E as <strong>contas de serviço</strong>?
+          São os <strong>zeladores</strong> que trabalham de madrugada, sem rosto, mas essenciais pro prédio funcionar. 🔧
+        </p>
+      </div>
+
+      <div class="id-types reveal">
+        <h3>Os 5 tipos de identidade</h3>
+        <div class="id-grid">
+          <div class="id-card">
+            <div class="id-card__emoji">🏢</div>
+            <h4>Tenant</h4>
+            <p class="id-card__child"><em>O prédio inteiro. Sua instância do Entra ID.</em></p>
+            <div class="id-card__senior">
+              <span class="tag tag--senior">⚡ Sênior</span>
+              <p>Instância dedicada e isolada da sua organização no Entra ID. Identificada por um <strong>tenant ID</strong> (GUID) e um nome de domínio inicial (<em>nomedaempresa.onmicrosoft.com</em>).</p>
+            </div>
+          </div>
+
+          <div class="id-card">
+            <div class="id-card__emoji">👤</div>
+            <h4>Usuário</h4>
+            <p class="id-card__child"><em>Os moradores do prédio. Pessoas de verdade.</em></p>
+            <div class="id-card__senior">
+              <span class="tag tag--senior">⚡ Sênior</span>
+              <p>Objeto que representa uma pessoa. Pode ser <strong>membro</strong> (interno) ou <strong>convidado</strong> (externo, via B2B). Contém perfil, credenciais e atributos.</p>
+            </div>
+          </div>
+
+          <div class="id-card">
+            <div class="id-card__emoji">👥</div>
+            <h4>Grupo</h4>
+            <p class="id-card__child"><em>O sindico que reúne moradores com algo em comum.</em></p>
+            <div class="id-card__senior">
+              <span class="tag tag--senior">⚡ Sênior</span>
+              <p>Contêiner de usuários/dispositivos para facilitar atribuição de permissões. Pode ser <strong>atribuído</strong> (manual), <strong>dinâmico</strong> (regra, ex: "departamento = TI") ou <strong>Microsoft 365</strong>.</p>
+            </div>
+          </div>
+
+          <div class="id-card">
+            <div class="id-card__emoji">🔑</div>
+            <h4>Dispositivo</h4>
+            <p class="id-card__child"><em>A chave do apartamento. O PC/phone que acessa o prédio.</em></p>
+            <div class="id-card__senior">
+              <span class="tag tag--senior">⚡ Sênior</span>
+              <p>Identidade do equipamento. Estados: <strong>Entra ID Registered</strong> (BYOD), <strong>Entra ID Joined</strong> (pertence à org, gerenciado pela nuvem) ou <strong>Hybrid Joined</strong> (AD local + Entra ID).</p>
+            </div>
+          </div>
+
+          <div class="id-card">
+            <div class="id-card__emoji">🔧</div>
+            <h4>Conta de Serviço</h4>
+            <p class="id-card__child"><em>O zelador noturno. Trabalha sem rosto, mas é essencial.</em></p>
+            <div class="id-card__senior">
+              <span class="tag tag--senior">⚡ Sênior</span>
+              <p>Conta não humana usada por apps, scripts ou serviços para acessar recursos de forma autônoma. Hoje recomenda-se <strong>Managed Identities</strong> ou <strong>Workload Identities</strong> (sem senha estática).</p>
+            </div>
+          </div>
+
+          <div class="id-card">
+            <div class="id-card__emoji">📨</div>
+            <h4>Contato de Email</h4>
+            <p class="id-card__child"><em>A lista de visitantes que recebem correspondência.</em></p>
+            <div class="id-card__senior">
+              <span class="tag tag--senior">⚡ Sênior</span>
+              <p>Objeto de contato que NÃO tem permissões de login — serve para distribuição de emails e listas de endereços. Não confundir com usuário convidado.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout--key reveal">
+        <strong>🔑 Conceito-chave:</strong> No Entra ID tudo é um <strong>objeto</strong> com uma identidade. Saber o tipo certo ajuda a aplicar a política correta. Ex.: só <strong>usuários</strong> e <strong>contas de serviço</strong> fazem login; <strong>dispositivos</strong> participam de políticas de Acesso Condicional.
+      </div>
+    </div>
+
+    <button class="lesson__done reveal" data-complete="aula-1">
+      <span class="lesson__done-check">✓</span> Marcar aula como concluída
+    </button>
+  </section>
+
+  <!-- ============================================================
+       AULA 2 — ENTRA ID vs AD DS
+       ============================================================ -->
+  <section class="lesson" id="aula-2">
+    <div class="lesson__head reveal">
+      <span class="lesson__num">Aula 02</span>
+      <h2>🌐 Entra ID vs Active Directory (e o Híbrido)</h2>
+      <p class="lesson__intro">Dois diretórios, duas eras. Entenda a diferença e como eles convivem no mundo híbrido.</p>
+    </div>
+
+    <div class="lesson__body">
+      <div class="story reveal">
+        <div class="story__icon">🌐</div>
+        <h3>Imagine assim...</h3>
+        <p>
+          O <strong>Active Directory (AD DS)</strong> é como a <strong>matriz local</strong> de uma empresa — funciona
+          no prédio físico, com regras próprias, mas só alcança quem está <em>dentro</em> das paredes.
+          O <strong>Microsoft Entra ID</strong> é a <strong>sede nacional/global</strong> — acessível de qualquer lugar
+          do mundo pela internet. E o <strong>Entra Connect</strong>? É o <strong>serviço de correio expresso</strong>
+          que mantém a matriz e a sede sincronizadas: tudo que muda numa, aparece na outra. 📬
+        </p>
+      </div>
+
+      <div class="compare-cards reveal">
+        <div class="cmp-card cmp-card--ad">
+          <div class="cmp-card__emoji">🏛️</div>
+          <h4>Active Directory (AD DS)</h4>
+          <p class="cmp-card__era"><em>A era on-premises · criado em 2000</em></p>
+          <ul>
+            <li>Funciona em servidores <strong>locais</strong> (Windows Server)</li>
+            <li>Usa protocolos legados: <strong>Kerberos, LDAP, NTLM</strong>, GPOs</li>
+            <li>Domínios, florestas e OUs hierárquicas</li>
+            <li>Exige conectividade de rede direta (VPN/RDP)</li>
+            <li>A Microsoft só fornece o software — você cuida do servidor</li>
+          </ul>
+        </div>
+
+        <div class="cmp-card cmp-card--entra">
+          <div class="cmp-card__emoji">☁️</div>
+          <h4>Microsoft Entra ID</h4>
+          <p class="cmp-card__era"><em>A era cloud · evoluiu do Azure AD</em></p>
+          <ul>
+            <li>Serviço <strong>multilocatário na nuvem</strong> (SaaS da Microsoft)</li>
+            <li>Usa protocolos modernos: <strong>SAML, OAuth 2.0, OIDC</strong>, SCIM</li>
+            <li>Estrutura plana (sem OUs/florestas)</li>
+            <li>Acessível de qualquer lugar pela internet</li>
+            <li>A Microsoft cuida da infraestrutura — você gerencia identidades</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="connect-box reveal">
+        <h4>🔗 Microsoft Entra Connect — a ponte híbrida</h4>
+        <p>
+          Quando uma empresa JÁ TEM o AD local e QUER a nuvem, ela não precisa escolher. O <strong>Entra Connect</strong>
+          sincroniza identidades do AD local para o Entra ID. Existem 3 modelos principais:
+        </p>
+        <div class="connect-modes">
+          <div class="cmode">
+            <strong>Password Hash Sync (PHS)</strong>
+            <span>O mais comum. Sincroniza hashes de senha. Permite auth na nuvem mesmo se o AD local cair.</span>
+          </div>
+          <div class="cmode">
+            <strong>Pass-Through Auth (PTA)</strong>
+            <span>Valida a senha diretamente no AD local em tempo real. Mais segura contra senhas vazadas.</span>
+          </div>
+          <div class="cmode">
+            <strong>Federation (AD FS)</strong>
+            <span>Usa um servidor de federação (ex: AD FS). Mais complexo, para cenários avançados.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout--warning reveal">
+        <strong>⚠️ Cuidado na prova:</strong> <strong>Entra ID NÃO é apenas "uma versão na nuvem do AD"</strong>. Eles são produtos diferentes! O Entra ID é focado em identidade baseada em internet, com SSO e acesso condicional. Não suporta GPOs nem LDAP puro.
+      </div>
+    </div>
+
+    <button class="lesson__done reveal" data-complete="aula-2">
+      <span class="lesson__done-check">✓</span> Marcar aula como concluída
+    </button>
+  </section>
+
+  <!-- ============================================================
+       AULA 3 — MÉTODOS DE AUTENTICAÇÃO
+       ============================================================ -->
+  <section class="lesson" id="aula-3">
+    <div class="lesson__bar-emoji">🔑</div>
+    <div class="lesson__head reveal">
+      <span class="lesson__num">Aula 03</span>
+      <h2>🔑 Autenticação: Senha, MFA &amp; Passwordless</h2>
+      <p class="lesson__intro">Como você prova quem é? Da senha antiga ao futuro sem senha. A evolução da autenticação.</p>
+    </div>
+
+    <div class="lesson__body">
+      <div class="story reveal">
+        <div class="story__icon">🚪</div>
+        <h3>Imagine assim...</h3>
+        <p>
+          Uma porta com <strong>três cadeados</strong>, cada um de um tipo. 🔒
+          <br /><br />
+          🔹 <strong>Cadeado de senha</strong> — só quem sabe a combinação abre. Mas combinações vazam! 🫣
+          <br />🔹 <strong>Cadeado MFA</strong> — precisa da senha <em>E</em> da chave física (seu celular). Dois cadeados = mais seguro. 🔐
+          <br />🔹 <strong>Cadeado Passwordless</strong> — abre só com seu <strong>rosto ou digital</strong>. Sem senha, sem lembrar nada. É o futuro. 😎
+        </p>
+      </div>
+
+      <div class="auth-evol reveal">
+        <h3>As 3 gerações da autenticação</h3>
+        <div class="auth-evol__track">
+          <div class="auth-gen">
+            <div class="auth-gen__num">1</div>
+            <h4>Senha</h4>
+            <p class="auth-gen__child"><em>Algo que você SABE</em></p>
+            <p>Simples, mas fraca. Vaza, é reutilizada, sofre phishing. A causa nº 1 de invasões.</p>
+          </div>
+          <div class="auth-gen auth-gen--mfa">
+            <div class="auth-gen__num">2</div>
+            <h4>MFA</h4>
+            <p class="auth-gen__child"><em>Senha + algo que você TEM</em></p>
+            <p>Combina 2+ fatores: app autenticador, SMS, chamada. Bloqueia ~99.9% dos ataques de conta.</p>
+          </div>
+          <div class="auth-gen auth-gen--pass">
+            <div class="auth-gen__num">3</div>
+            <h4>Passwordless</h4>
+            <p class="auth-gen__child"><em>Algo que você É ou TEM (sem senha)</em></p>
+            <p>Biometria (Windows Hello), app (MS Authenticator) ou chave FIDO2. Sem senha pra vazarem.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sspr-box reveal">
+        <h4>🔄 SSPR — Self-Service Password Reset</h4>
+        <p>
+          "Esqueci minha senha!" — semSSPR, isso vira ticket pro TI. <strong>Com SSPR</strong>, o próprio usuário
+          redefine a senha sozinho, após provar quem é com métodos alternativos (email, celular, perguntas).
+          <br /><br />
+          💡 No Entra ID, <strong>SSPR e MFA compartilham os mesmos métodos de autenticação</strong> (Unified Registration).
+          O usuário registra uma vez e usa pra ambos.
+        </p>
+      </div>
+
+      <div class="callout callout--tip reveal">
+        <strong>🧠 Dica de prova:</strong> MFA é a resposta nº 1 para "como reduzir risco de contas comprometidas". E lembre: <strong>SMS é o método MFA mais fraco</strong> (sofre SIM-swap) — FIDO2 é o mais forte. Passwordless é o objetivo final.
+      </div>
+    </div>
+
+    <button class="lesson__done reveal" data-complete="aula-3">
+      <span class="lesson__done-check">✓</span> Marcar aula como concluída
+    </button>
+  </section>
+
+  <!-- ============================================================
+       AULA 4 — ACESSO CONDICIONAL
+       ============================================================ -->
+  <section class="lesson" id="aula-4">
+    <div class="lesson__head reveal">
+      <span class="lesson__num">Aula 04</span>
+      <h2>🎫 Acesso Condicional — O Cérebro do Zero Trust</h2>
+      <p class="lesson__intro">Se a identidade é a porta, o Acesso Condicional é o fiscal inteligente que decide se você entra ou não, baseado em sinais.</p>
+    </div>
+
+    <div class="lesson__body">
+      <div class="story reveal">
+        <div class="story__icon">🎫</div>
+        <h3>Imagine assim...</h3>
+        <p>
+          Você é o <strong>fiscal de um trem bala</strong> 🚄. Cada passageiro (login) chega e você analisa vários
+          sinais antes de liberar a catraca:
+          <br /><br />
+          🎫 <strong>Quem é?</strong> (usuário) &nbsp; 📍 <strong>De onde?</strong> (localização) &nbsp;
+          🕐 <strong>Que horas?</strong> (horário) &nbsp; 💻 <strong>PC da empresa?</strong> (dispositivo)
+          <br /><br />
+          Tudo normal? <em>Passa direto</em>. Mas se vier de <strong>país desconhecido, às 3h da manhã, num PC desconhecido</strong>?
+          Aí você diz: <strong>"Peraí! Mostra o dedo na biometria (MFA) antes de entrar."</strong> É isso que o
+          Acesso Condicional faz. 🧠
+        </p>
+      </div>
+
+      <div class="ca-flow reveal">
+        <h3>Como funciona: Signals → Decisions → Controls</h3>
+        <div class="ca-flow__grid">
+          <div class="ca-stage">
+            <div class="ca-stage__emoji">📡</div>
+            <h4>1. Signals (Sinais)</h4>
+            <p><em>O fiscal observa o passageiro</em></p>
+            <ul>
+              <li>Usuário / grupo</li>
+              <li>Localização (IP, país)</li>
+              <li>Plataforma (Windows, iOS)</li>
+              <li>App de destino</li>
+              <li>Risco de usuário/login</li>
+              <li>Dispositivo (compliance)</li>
+            </ul>
+          </div>
+
+          <div class="ca-arrow">➜</div>
+
+          <div class="ca-stage">
+            <div class="ca-stage__emoji">⚖️</div>
+            <h4>2. Access Decisions</h4>
+            <p><em>O fiscal decide</em></p>
+            <ul>
+              <li>✅ <strong>Block</strong> (bloquear)</li>
+              <li>✅ <strong>Allow</strong> (permitir)</li>
+              <li>✅ <strong>Allow but...</strong> (permitir, porém exigir MFA, dispositivo compliance, etc.)</li>
+            </ul>
+          </div>
+
+          <div class="ca-arrow">➜</div>
+
+          <div class="ca-stage">
+            <div class="ca-stage__emoji">🛡️</div>
+            <h4>3. Controls (Controles)</h4>
+            <p><em>O fiscal impõe condições</em></p>
+            <ul>
+              <li>Exigir MFA</li>
+              <li>Dispositivo marcado compliance</li>
+              <li>Hybrid joined</li>
+              <li>Termos de uso</li>
+              <li>Política de app (MAM)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="ca-example reveal">
+        <h4>📋 Exemplo real de política</h4>
+        <div class="ca-rule">
+          <span class="ca-rule__label">SE</span>
+          <div class="ca-rule__content">
+            o usuário é do grupo <strong>"Finanças"</strong><br />
+            <strong>E</strong> acessa de um <strong>local desconhecido</strong><br />
+            <strong>E</strong> o dispositivo <strong>não</strong> é da empresa
+          </div>
+        </div>
+        <div class="ca-rule ca-rule--then">
+          <span class="ca-rule__label">ENTÃO</span>
+          <div class="ca-rule__content">
+            <strong>Bloquear o acesso</strong> 🔒<br />
+            <em>(ou exigir MFA + dispositivo compliance)</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout--key reveal">
+        <strong>🔑 Conceito-chave:</strong> Acesso Condicional é a <strong>implementação prática do Zero Trust</strong> no Entra ID. A régua é: <strong>If-Then</strong> ("se este sinal, então esta decisão"). É o recurso mais cobrado na prova sobre Entra ID!
+      </div>
+    </div>
+
+    <button class="lesson__done reveal" data-complete="aula-4">
+      <span class="lesson__done-check">✓</span> Marcar aula como concluída
+    </button>
+  </section>
+
+  <!-- ============================================================
+       AULA 5 — GOVERNANÇA & PIM
+       ============================================================ -->
+  <section class="lesson" id="aula-5">
+    <div class="lesson__head reveal">
+      <span class="lesson__num">Aula 05</span>
+      <h2>🗝️ Governança &amp; PIM — Controlando o Poder</h2>
+      <p class="lesson__intro">Quem tem acesso admin demais é um risco. Aprenda a controlar privilégios com tempo limitado e revisões.</p>
+    </div>
+
+    <div class="lesson__body">
+      <div class="story reveal">
+        <div class="story__icon">🗝️</div>
+        <h3>Imagine assim...</h3>
+        <p>
+          No cofre do banco, ninguém fica o dia inteiro com a <strong>chave-mestra</strong> na mão. 🗝️
+          Quando um gerente precisa abrir o cofre, ele <strong>solicita a chave na hora</strong>, usa por
+          <strong>30 minutos</strong>, e depois a chave é devolvida. Sempre com <strong>registro de quem pegou,
+          quando e por quê</strong>.
+          <br /><br />
+          Isso é o <strong>PIM (Privileged Identity Management)</strong>: ninguém fica com poder admin o tempo todo.
+          O poder é <strong>just-in-time</strong> — só na hora que precisa, pelo tempo necessário. 🔐
+        </p>
+      </div>
+
+      <div class="gov-grid reveal">
+        <div class="gov-card">
+          <div class="gov-card__emoji">🗝️</div>
+          <h4>Privileged Identity Management (PIM)</h4>
+          <p class="gov-card__child"><em>A chave do cofre emprestada só na hora.</em></p>
+          <div class="gov-card__senior">
+            <span class="tag tag--senior">⚡ Sênior</span>
+            <p>Permite que usuários elegíveis <strong>ativem</strong> um papel privilegiado (ex: Global Admin) apenas quando necessário, por tempo limitado, com <strong>justificativa e aprovação</strong>. Reduz a janela de exposição ao ataque.</p>
+          </div>
+        </div>
+
+        <div class="gov-card">
+          <div class="gov-card__emoji">🔍</div>
+          <h4>Access Reviews</h4>
+          <p class="gov-card__child"><em>A inspeção periódica: "Você ainda precisa desse acesso?"</em></p>
+          <div class="gov-card__senior">
+            <span class="tag tag--senior">⚡ Sênior</span>
+            <p>Revisões periódicas onde gestores/usuários confirmam se um acesso ainda é necessário. Remove acessos obsoletos automaticamente. Combate o acúmulo de privilégios ("privilege creep").</p>
+          </div>
+        </div>
+
+        <div class="gov-card">
+          <div class="gov-card__emoji">📦</div>
+          <h4>Entitlement Management</h4>
+          <p class="gov-card__child"><em>O pacote de boas-vindas: acesso a tudo que o novato precisa, num clique.</em></p>
+          <div class="gov-card__senior">
+            <span class="tag tag--senior">⚡ Sênior</span>
+            <p>Automatiza o <strong>ciclo de vida de identidade</strong>: define pacotes de acesso (grupos, apps, sites) com fluxos de aprovação e <strong>expiração automática</strong>. Ideal pra onboarding/offboarding em escala.</p>
+          </div>
+        </div>
+
+        <div class="gov-card">
+          <div class="gov-card__emoji">🚨</div>
+          <h4>Identity Protection</h4>
+          <p class="gov-card__child"><em>O alarme que detecta comportamento suspeito nas contas.</em></p>
+          <div class="gov-card__senior">
+            <span class="tag tag--senior">⚡ Sênior</span>
+            <p>Detecta e remedia <strong>riscos em tempo real</strong>: <em>user risk</em> (credenciais vazadas) e <em>sign-in risk</em> (login de local anômalo). Pode acionar Acesso Condicional automaticamente (ex: exigir MFA se risco = médio).</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout--tip reveal">
+        <strong>🧠 Dica de prova:</strong> A combinação perfeita é: <strong>PIM + Access Reviews + Identity Protection</strong>. Juntos, eles implementam o princípio <strong>Least Privilege</strong> do Zero Trust no nível de identidade. Lembre: PIM ativa o poder "na hora" (just-in-time), Access Reviews limpa o que sobra, e Identity Protection detecta ameaças.
+      </div>
+    </div>
+
+    <button class="lesson__done reveal" data-complete="aula-5">
+      <span class="lesson__done-check">✓</span> Marcar aula como concluída
+    </button>
+  </section>
+
+  <!-- ============================================================
+       AULA 6 — B2B E B2C
+       ============================================================ -->
+  <section class="lesson" id="aula-6">
+    <div class="lesson__head reveal">
+      <span class="lesson__num">Aula 06</span>
+      <h2>🤝 Entra External Identities — B2B &amp; B2C</h2>
+      <p class="lesson__intro">Como colaborar com pessoas de FORA da sua organização? Existem dois caminhos: empresas parceiras (B2B) ou consumidores finais (B2C).</p>
+    </div>
+
+    <div class="lesson__body">
+      <div class="story reveal">
+        <div class="story__icon">🤝</div>
+        <h3>Imagine assim...</h3>
+        <p>
+          Sua empresa é um <strong>clube exclusivo</strong>. 🏢 Às vezes você precisa deixar entrar pessoas de fora.
+          Existem dois cenários bem diferentes:
+          <br /><br />
+          🤝 <strong>B2B (Business-to-Business)</strong> — um consultor de <strong>outra empresa</strong> vem colaborar
+          num projeto. Ele tem crachá da empresa dele, mas você emite um <strong>crachá de visitante VIP</strong>.
+          Ele usa a própria identidade (sem criar nova conta).
+          <br /><br />
+          🛒 <strong>B2C (Business-to-Consumer)</strong> — você tem um <strong>app de vendas</strong> pro público.
+          Milhões de clientes da rua precisam criar conta. Cada um escolhe como logar: Google, Facebook, email...
+          Você não quer gerenciar isso tudo — então deixa o Entra fazer.
+        </p>
+      </div>
+
+      <div class="external-grid reveal">
+        <div class="ext-card ext-card--b2b">
+          <div class="ext-card__emoji">🤝</div>
+          <h4>Entra B2B</h4>
+          <p class="ext-card__sub"><em>Business-to-Business · Colaboração entre empresas</em></p>
+          <div class="ext-card__body">
+            <p><strong>Para quem:</strong> parceiros, fornecedores, consultores de OUTRA empresa.</p>
+            <p><strong>Como funciona:</strong> você <strong>convida</strong> o usuário externo. Ele aparece no seu Entra ID como <strong>Guest</strong>, mas se autentica no <strong>próprio Entra ID da empresa dele</strong>.</p>
+            <p><strong>Vantagem:</strong> sem nova senha. Se ele for demitido, a conta original some e o acesso acaba automaticamente.</p>
+            <p class="ext-card__ex"><em>Ex:</em> Um consultor da Accenture acessa SharePoint da sua empresa com a conta <code>joao@accenture.com</code>.</p>
+          </div>
+        </div>
+
+        <div class="ext-card ext-card--b2c">
+          <div class="ext-card__emoji">🛒</div>
+          <h4>Entra B2C</h4>
+          <p class="ext-card__sub"><em>Business-to-Consumer · Clientes finais</em></p>
+          <div class="ext-card__body">
+            <p><strong>Para quem:</strong> milhões de clientes/consumidores (cidadãos, usuários finais).</p>
+            <p><strong>Como funciona:</strong> você publica um app (web/mobile). O B2C cuida do cadastro e login. O cliente escolhe o método: <strong>email+senha, Google, Facebook, Microsoft</strong>.</p>
+            <p><strong>Vantagem:</strong> escala pra milhões. Você não gerencia senhas — só recebe um <strong>token</strong> confirmando a identidade.</p>
+            <p class="ext-card__ex"><em>Ex:</em> Um app de delivery onde clientes logam com conta Google.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-mini reveal">
+        <h4>⚡ Diferença resumida</h4>
+        <table class="mini-table">
+          <thead>
+            <tr>
+              <th>Aspecto</th>
+              <th>B2B</th>
+              <th>B2C</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Quem são?</td><td>Empresas parceiras</td><td>Consumidores finais</td></tr>
+            <tr><td>Quantidade</td><td>Poucos (centenas)</td><td>Milhões</td></tr>
+            <tr><td>Identidade gerenciada por</td><td>Empresa parceira</td><td>Próprio B2C (ou social)</td></tr>
+            <tr><td>Tipo de usuário</td><td>Guest no seu tenant</td><td>Conta local ou social</td></tr>
+            <tr><td>Cenário</td><td>Colaboração</td><td>App/SaaS para clientes</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout--key reveal">
+        <strong>🔑 Decore:</strong> <strong>B2B</strong> = colaboração entre empresas (o visitante traz a própria identidade). <strong>B2C</strong> = milhões de consumidores acessando seu app (B2C gerencia as contas). Não confunda! Pegadinha clássica: B2B usa o <strong>tenant do parceiro</strong>, B2C cria um tenant <strong>separado</strong> do Entra ID interno.
+      </div>
+    </div>
+
+    <button class="lesson__done reveal" data-complete="aula-6">
+      <span class="lesson__done-check">✓</span> Marcar aula como concluída
+    </button>
+  </section>
+
+  <!-- ============================================================
+       QUIZ (PT) + BANNER PARA O QUIZ EM INGLÊS
+       ============================================================ -->
+  <section class="lesson" id="quiz">
+    <div class="lesson__head reveal">
+      <span class="lesson__num">🎯 Desafio Final</span>
+      <h2>Quiz — Teste o que você aprendeu!</h2>
+      <p class="lesson__intro">6 perguntas no estilo da prova SC-900. Veja sua pontuação ao final.</p>
+    </div>
+
+    <!-- Banner: Quiz em Inglês -->
+    <a href="quiz-2.html" class="en-quiz-banner reveal">
+      <div class="en-quiz-banner__icon">🇺🇸</div>
+      <div class="en-quiz-banner__body">
+        <h3>Quiz em Inglês (10 questões) — Treine para a prova real!</h3>
+        <p>A prova SC-900 é em inglês. Pratique com 10 perguntas que mais caem sobre Entra ID, com tradução e vocabulário.</p>
+      </div>
+      <div class="en-quiz-banner__cta">Acessar →</div>
+    </a>
+
+    <div class="quiz reveal" id="quizContainer">
+      <!-- Gerado via JS -->
+    </div>
+
+    <div class="quiz-result" id="quizResult" hidden>
+      <div class="quiz-result__score" id="quizScore">0/6</div>
+      <p class="quiz-result__msg" id="quizMsg"></p>
+      <button class="btn btn--ghost" id="quizRetry">🔄 Refazer quiz</button>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <a href="index.html" class="btn btn--primary" style="margin-bottom:18px;">← Voltar ao Blueprint</a>
+      <p class="footer__motto">"Identity is the new control plane." — Microsoft Security</p>
+      <p class="footer__note">Módulo 2 · Capacidades do Microsoft Entra ID · SC-900</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <script src="modulo-2.js"></script>
+</body>
+</html>

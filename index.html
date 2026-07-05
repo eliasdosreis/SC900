@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SC-900 Blueprint · Microsoft Security, Compliance & Identity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Decorative blueprint grid -->
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="glow glow--1" aria-hidden="true"></div>
+  <div class="glow glow--2" aria-hidden="true"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="nav">
+    <div class="nav__brand">
+      <div class="nav__logo">
+        <svg viewBox="0 0 23 23" fill="none" aria-hidden="true">
+          <rect x="1" y="1" width="9.5" height="9.5" fill="#F25022"/>
+          <rect x="12.5" y="1" width="9.5" height="9.5" fill="#7FBA00"/>
+          <rect x="1" y="12.5" width="9.5" height="9.5" fill="#00A4EF"/>
+          <rect x="12.5" y="12.5" width="9.5" height="9.5" fill="#FFB900"/>
+        </svg>
+      </div>
+      <div class="nav__title">
+        <strong>SC-900</strong>
+        <span>Blueprint</span>
+      </div>
+    </div>
+    <nav class="nav__links">
+      <a href="#overview">Visão Geral</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#topics">Tópicos</a>
+      <a href="#resources">Recursos</a>
+    </nav>
+    <div class="nav__chip" id="navProgress">
+      <span class="nav__chip-dot"></span>
+      <span id="navProgressText">0% concluído</span>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="overview">
+    <div class="hero__inner">
+      <span class="badge reveal">
+        <span class="badge__pulse"></span>
+        <span class="badge__new">NOVO · Módulos 1 &amp; 2 disponíveis</span>
+      </span>
+      <h1 class="hero__title reveal">
+        Security, Compliance<br />&amp; Identity Fundamentals
+      </h1>
+      <p class="hero__subtitle reveal">
+        Seu blueprint completo de estudos. Domine os conceitos de segurança, identidade e conformidade
+        no ecossistema Microsoft e conquiste sua certificação.
+      </p>
+
+      <div class="hero__stats reveal">
+        <div class="stat">
+          <span class="stat__num" data-target="4">0</span>
+          <span class="stat__label">Domínios</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" data-target="15">0</span>
+          <span class="stat__label">Áreas</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" data-target="45">0</span>
+          <span class="stat__label">Minutos</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" data-target="700">0</span>
+          <span class="stat__label">Pontuação mínima</span>
+        </div>
+      </div>
+
+      <div class="hero__actions reveal">
+        <a href="modulo-2.html" class="btn btn--primary">
+          👤 Estudar Módulo 2 — Microsoft Entra ID
+          <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="modulo-1.html" class="btn btn--ghost">📖 Módulo 1 — Conceitos de SCI</a>
+      </div>
+      <div class="hero__actions reveal" style="margin-top:14px;">
+        <a href="#topics" class="btn btn--ghost btn--sm">Ver checklist de tópicos</a>
+        <button class="btn btn--ghost btn--sm" id="resetBtn">🔄 Resetar progresso</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROGRESS ===================== -->
+  <section class="progress-wrap">
+    <div class="progress-card reveal">
+      <div class="progress-card__head">
+        <h2>Seu progresso geral</h2>
+        <span class="progress-card__value" id="overallValue">0%</span>
+      </div>
+      <div class="progress-card__bar">
+        <div class="progress-card__fill" id="overallFill"></div>
+      </div>
+      <div class="domain-mini" id="domainMini"><!-- preenchido via JS --></div>
+    </div>
+  </section>
+
+  <!-- ===================== ROADMAP ===================== -->
+  <section class="section" id="roadmap">
+    <div class="section__head reveal">
+      <span class="section__eyebrow">Roteiro</span>
+      <h2 class="section__title">Os 4 domínios do exame</h2>
+      <p class="section__desc">A prova SC-900 é dividida em quatro áreas com pesos diferentes. Quanto maior o peso, mais tempo dedique.</p>
+    </div>
+
+    <div class="domains">
+      <article class="domain-card reveal" style="--accent:#4F8EF7">
+        <div class="domain-card__top">
+          <span class="domain-card__num">01</span>
+          <span class="domain-card__weight">10–15%</span>
+        </div>
+        <h3>Conceitos de Segurança, Conformidade e Identidade</h3>
+        <p>Fundamentos: princípios de segurança (Zero Trust, CIA), modelos de conformidade e conceitos de identidade (autenticação, autorização, SSO, Federação).</p>
+        <div class="domain-card__bar"><span style="width:12.5%"></span></div>
+      </article>
+
+      <article class="domain-card reveal" style="--accent:#7FBA00">
+        <div class="domain-card__top">
+          <span class="domain-card__num">02</span>
+          <span class="domain-card__weight">25–30%</span>
+        </div>
+        <h3>Capacidades do Microsoft Entra ID</h3>
+        <p>Tipos de identidade, métodos de autenticação (MFA, Passwordless), acesso condicional, governança e proteção de identidade.</p>
+        <div class="domain-card__bar"><span style="width:27.5%"></span></div>
+      </article>
+
+      <article class="domain-card reveal" style="--accent:#F25022">
+        <div class="domain-card__top">
+          <span class="domain-card__num">03</span>
+          <span class="domain-card__weight">30–35%</span>
+        </div>
+        <h3>Soluções de Segurança da Microsoft</h3>
+        <p>Segurança no Azure, Microsoft Defender XDR, Defender for Cloud, proteção contra ameaças e gerenciamento de postura de segurança.</p>
+        <div class="domain-card__bar"><span style="width:32.5%"></span></div>
+      </article>
+
+      <article class="domain-card reveal" style="--accent:#FFB900">
+        <div class="domain-card__top">
+          <span class="domain-card__num">04</span>
+          <span class="domain-card__weight">25–30%</span>
+        </div>
+        <h3>Soluções de Conformidade da Microsoft</h3>
+        <p>Microsoft Purview: gestão de conformidade, prevenção de perda de dados, eDiscovery, Service Trust Portal e privacidade no Microsoft 365.</p>
+        <div class="domain-card__bar"><span style="width:27.5%"></span></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===================== TOPICS (CHECKLIST) ===================== -->
+  <section class="section" id="topics">
+    <div class="section__head reveal">
+      <span class="section__eyebrow">Tópicos · Checklist interativa</span>
+      <h2 class="section__title">Mapa de estudos detalhado</h2>
+      <p class="section__desc">Marque cada tópico conforme avança. Seu progresso é salvo automaticamente no navegador.</p>
+    </div>
+
+    <div class="topics" id="topicsGrid">
+      <!-- Os cards de tópicos são gerados via JavaScript a partir dos dados -->
+    </div>
+  </section>
+
+  <!-- ===================== RESOURCES ===================== -->
+  <section class="section" id="resources">
+    <div class="section__head reveal">
+      <span class="section__eyebrow">Recursos oficiais</span>
+      <h2 class="section__title">Onde estudar</h2>
+      <p class="section__desc">Combine a trilha oficial da Microsoft com prática em laboratórios.</p>
+    </div>
+
+    <div class="resources">
+      <a class="resource reveal" href="https://learn.microsoft.com/pt-br/credentials/certifications/security-compliance-and-identity-fundamentals/" target="_blank" rel="noopener">
+        <div class="resource__icon">📚</div>
+        <h3>Microsoft Learn</h3>
+        <p>Trilha de aprendizado oficial completa para o exame.</p>
+        <span class="resource__link">Acessar →</span>
+      </a>
+      <a class="resource reveal" href="https://learn.microsoft.com/pt-br/credentials/certifications/resources/study-guides/sc-900-study-guide" target="_blank" rel="noopener">
+        <div class="resource__icon">🗺️</div>
+        <h3>Study Guide</h3>
+        <p>Guia oficial com todos os tópicos medidos na prova.</p>
+        <span class="resource__link">Acessar →</span>
+      </a>
+      <a class="resource reveal" href="https://learn.microsoft.com/training/modules/examine-microsoft-cloud-services/" target="_blank" rel="noopener">
+        <div class="resource__icon">🧪</div>
+        <h3>Laboratórios práticos</h3>
+        <p>Módulos hands-on no sandbox gratuito da Microsoft.</p>
+        <span class="resource__link">Acessar →</span>
+      </a>
+      <a class="resource reveal" href="https://learn.microsoft.com/credentials/certifications/exam-sc-900" target="_blank" rel="noopener">
+        <div class="resource__icon">📝</div>
+        <h3>Agendar a prova</h3>
+        <p>Detalhes, formato e agendamento do exame SC-900.</p>
+        <span class="resource__link">Acessar →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__motto">"A segurança não é um produto, mas um processo." — Bruce Schneier</p>
+      <p class="footer__note">Feito para estudos · SC-900 Blueprint · Não afiliado oficialmente à Microsoft.</p>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

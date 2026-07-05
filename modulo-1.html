@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Módulo 1 · Conceitos de Segurança, Conformidade e Identidade — SC-900</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="modulo-1.css" />
+</head>
+<body>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="glow glow--1" aria-hidden="true"></div>
+  <div class="glow glow--2" aria-hidden="true"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="nav">
+    <a href="index.html" class="nav__brand">
+      <div class="nav__logo">
+        <svg viewBox="0 0 23 23" fill="none" aria-hidden="true">
+          <rect x="1" y="1" width="9.5" height="9.5" fill="#F25022"/>
+          <rect x="12.5" y="1" width="9.5" height="9.5" fill="#7FBA00"/>
+          <rect x="1" y="12.5" width="9.5" height="9.5" fill="#00A4EF"/>
+          <rect x="12.5" y="12.5" width="9.5" height="9.5" fill="#FFB900"/>
+        </svg>
+      </div>
+      <div class="nav__title">
+        <strong>SC-900</strong>
+        <span>Módulo 1 · SCI</span>
+      </div>
+    </a>
+    <nav class="nav__links">
+      <a href="#aula-1">CIA</a>
+      <a href="#aula-2">Zero Trust</a>
+      <a href="#aula-3">Defesa</a>
+      <a href="#aula-4">Identidade</a>
+      <a href="#aula-5">Nuvem</a>
+      <a href="#aula-6">Conformidade</a>
+      <a href="#quiz">Quiz</a>
+    </nav>
+  </header>
+
+  <!-- ===================== HERO DO MÓDULO ===================== -->
+  <section class="m-hero">
+    <div class="m-hero__inner">
+      <span class="badge reveal"><span class="badge__pulse"></span>Módulo 01 · 10–15% da prova</span>
+      <h1 class="m-hero__title reveal">
+        Conceitos de Segurança,<br />Conformidade &amp; Identidade
+      </h1>
+      <p class="m-hero__subtitle reveal">
+        Antes de aprender as ferramentas, você precisa entender as <strong>ideias</strong>.
+        Vamos transformar conceitos complexos em histórias simples — e depois elevar ao nível sênior. 🚀
+      </p>
+
+      <div class="m-hero__path reveal" id="lessonPath">
+        <a href="#aula-1" class="path-dot" data-lesson="1"><span>1</span><em>Os 3 Pilares</em></a>
+        <a href="#aula-2" class="path-dot" data-lesson="2"><span>2</span><em>Zero Trust</em></a>
+        <a href="#aula-3" class="path-dot" data-lesson="3"><span>3</span><em>Defesa em Profundidade</em></a>
+        <a href="#aula-4" class="path-dot" data-lesson="4"><span>4</span><em>Identidade</em></a>
+        <a href="#aula-5" class="path-dot" data-lesson="5"><span>5</span><em>Modelos de Nuvem</em></a>
+        <a href="#aula-6" class="path-dot" data-lesson="6"><span>6</span><em>Conformidade</em></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROGRESSO DO MÓDULO ===================== -->
+  <div class="m-progress-wrap">
+    <div class="progress-card reveal">
+      <div class="progress-card__head">
+        <h2>📚 Seu progresso neste módulo</h2>
+        <span class="progress-card__value" id="moduleProgress">0%</span>
+      </div>
+      <div class="progress-card__bar">
+        <div class="progress-card__fill" id="moduleFill"></div>
+      </div>
+      <p class="m-progress-hint" id="moduleHint">Leia cada aula e marque como concluída 👇</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       AULA 1 — A TRÍADE CIA
+       ============================================================ -->
+  <section class="lesson" id="aula-1">
+    <div class="lesson__head reveal">
+      <span class="lesson__num">Aula 01</span>
+      <h2>🛡️ A Tríade CIA — Os 3 Pilares da Segurança</h2>
+      <p class="lesson__intro">Toda a segurança digital do mundo se apoia em três pernas. Decore estas três letras e você já entendeu 80% da teoria.</p>
+    </div>
+
+    <div class="lesson__body">
+      <!-- Analogia -->
+      <div class="story reveal">
+        <div class="story__icon">🏰</div>
+        <h3>Imagine assim...</h3>
+        <p>
+          Você tem um <strong>baú do tesouro</strong> guardando seu bem mais precioso. Para proteger esse tesouro,
+          você precisa garantir <strong>três coisas</strong>:
+        </p>
+      </div>
+
+      <div class="cia-triad reveal">
+        <div class="pillar pillar--c">
+          <div class="pillar__letter">C</div>
+          <h4>Confidencialidade</h4>
+          <p class="pillar__child">🔒 <em>Só quem tem a chave pode abrir o baú.</em> Ninguém espiando por dentro.</p>
+          <div class="pillar__senior">
+            <span class="tag tag--senior">⚡ Nível Sênior</span>
+            <p>Garantir que os dados sejam acessíveis <strong>apenas a quem tem autorização</strong>. Implementado com <strong>criptografia</strong> (em repouso e em trânsito), controle de acesso (RBAC) e classificação de dados. Uma violação = vazamento (data breach).</p>
+          </div>
+        </div>
+
+        <div class="pillar pillar--i">
+          <div class="pillar__letter">I</div>
+          <h4>Integridade</h4>
+          <p class="pillar__child">✏️ <em>Ninguém pode alterar o tesouro em segredo.</em> Se alguém mudar, você percebe.</p>
+          <div class="pillar__senior">
+            <span class="tag tag--senior">⚡ Nível Sênior</span>
+            <p>Garantir que os dados <strong>não foram alterados</strong> de forma não autorizada. Implementado com <strong>hashing</strong> (SHA-256), assinaturas digitais e <strong>HMAC</strong>. Ataques: man-in-the-middle, tampering. Exemplo real: um hacker altera o valor de uma transferência bancária.</p>
+          </div>
+        </div>
+
+        <div class="pillar pillar--a">
+          <div class="pillar__letter">A</div>
+          <h4>Disponibilidade</h4>
+          <p class="pillar__child">⚡ <em>Quando você precisar do tesouro, ele está lá.</em> Sempre acessível.</p>
+          <div class="pillar__senior">
+            <span class="tag tag--senior">⚡ Nível Sênior</span>
+            <p>Garantir que sistemas e dados estejam <strong>acessíveis quando necessário</strong>. Implementado com redundância, backups, load balancing e alta disponibilidade. O inimigo nº 1: ataques <strong>DDoS</strong> e <strong>ransomware</strong> (que "sequestram" a disponibilidade).</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout--tip reveal">
+        <strong>🧠 Dica de prova:</strong> Se a questão falar em <em>vazamento</em> → Confidencialidade. <em>Alteração</em> → Integridade. <em>Indisponibilidade/quedas</em> → Disponibilidade. Sempre mapeie a palavra-chave ao pilar!
+      </div>
+    </div>
+
+    <button class="lesson__done reveal" data-complete="aula-1">
+      <span class="lesson__done-check">✓</span> Marcar aula como concluída
+    </button>
+  </section>
+
+  <!-- ============================================================
+       AULA 2 — ZERO TRUST
+       ============================================================ -->
+  <section class="lesson" id="aula-2">
+    <div class="lesson__head reveal">
+      <span class="lesson__num">Aula 02</span>
+      <h2>🚪 Zero Trust — "Nunca Confie, Sempre Verifique"</h2>
+      <p class="lesson__intro">O modelo de segurança que mudou tudo. Esqueça o velho "castelo com muralha" — agora cada porta é vigiada.</p>
+    </div>
+
+    <div class="lesson__body">
+      <div class="story reveal">
+        <div class="story__icon">🎢</div>
+        <h3>Imagine assim...</h3>
+        <p>
+          Pense num <strong>parque de diversões super seguro</strong>. No modelo antigo, você mostra o ingresso
+          só na <em>entrada</em> — depois fica livre pra andar em tudo. No <strong>Zero Trust</strong>, o guarda
+          confere seu ingresso <strong>em cada brinquedo</strong>, toda vez. Mesmo que você já tenha entrado.
+          "Já está dentro? Não importa — mostre o ingresso de novo." 🔍
+        </p>
+      </div>
+
+      <div class="zt-principles reveal">
+        <h3>Os 3 Princípios do Zero Trust</h3>
+        <div class="zt-grid">
+          <div class="zt-card">
+            <div class="zt-card__emoji">✅</div>
+            <h4>Verificar Explicitamente</h4>
+            <p class="zt-card__child">Sempre conferir <em>quem</em> é você, não importa de onde venha.</p>
+            <p class="zt-card__senior"><strong>Autenticar sempre</strong>, com base em múltiplos sinais: identidade, localização, saúde do dispositivo, risco. Nada de "confiança implícita" por estar dentro da rede corporativa.</p>
+          </div>
+          <div class="zt-card">
+            <div class="zt-card__emoji">🎫</div>
+            <h4>Menor Acesso Possível</h4>
+            <p class="zt-card__child">Cada pessoa só entra onde <em>precisa</em> ir — nem um cômodo a mais.</p>
+            <p class="zt-card__senior"><strong>Least Privilege Access (JIT/JEA)</strong>: acesso Just-In-Time, Just-Enough-Access. O usuário recebe o mínimo necessário, pelo tempo mínimo necessário.</p>
+          </div>
+          <div class="zt-card">
+            <div class="zt-card__emoji">🛑</div>
+            <h4>Assumir a Violação</h4>
+            <p class="zt-card__child">Aja como se um ladrão <em>já</em> tivesse entrado. O que ele consegue roubar?</p>
+            <p class="zt-card__senior"><strong>Assume Breach</strong>: segmentar a rede (micro-segmentação), criptografar tudo, monitorar continuamente e ter resposta a incidentes pronta. Reduz o "blast radius" (área de impacto).</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare reveal">
+        <div class="compare__col compare__col--old">
+          <h4>❌ Modelo Antigo ("Castelo")</h4>
+          <ul>
+            <li>Muralha protege o perímetro</li>
+            <li>Confiança total <em>dentro</em> da rede</li>
+            <li>Firewall na borda resolve</li>
+            <li>Se invadirem, é festa 🎉 pra eles</li>
+          </ul>
+        </div>
+        <div class="compare__arrow">➜</div>
+        <div class="compare__col compare__col--new">
+          <h4>✅ Modelo Zero Trust</h4>
+          <ul>
+            <li>Não existe "dentro" ou "fora"</li>
+            <li>Verificação contínua em cada acesso</li>
+            <li>Identidade é o novo perímetro</li>
+            <li>Invasor entra? Fica preso num cantinho 🔒</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <button class="lesson__done reveal" data-complete="aula-2">
+      <span class="lesson__done-check">✓</span> Marcar aula como concluída
+    </button>
+  </section>
+
+  <!-- ============================================================
+       AULA 3 — DEFESA EM PROFUNDIDADE
+       ============================================================ -->
+  <section class="lesson" id="aula-3">
+    <div class="lesson__head reveal">
+      <span class="lesson__num">Aula 03</span>
+      <h2>🧅 Defesa em Profundidade — As Camadas da Cebola</h2>
+      <p class="lesson__intro">Uma muralha só não basta. E se o inimigo passar? Por isso usamos várias camadas de proteção.</p>
+    </div>
+
+    <div class="lesson__body">
+      <div class="story reveal">
+        <div class="story__icon">🏰</div>
+        <h3>Imagine assim...</h3>
+        <p>
+          Um <strong>castelo medieval</strong> nunca tem só uma porta. Ele tem: um fosso com água 🌊,
+          uma muralha externa 🧱, guardas 👮, uma muralha interna, e por fim o cofre do rei 🔒.
+          Se o ladrão passar pelo fosso, esbarra na muralha. Passou pela muralha? Os guardas pegam.
+          <strong>Cada camada é uma chance de parar o ataque.</strong>
+        </p>
+      </div>
+
+      <div class="layers reveal">
+        <h3>As 6 Camadas da Defesa em Profundidade</h3>
+        <p class="layers__sub">Da <strong>parte mais externa</strong> (física) até a <strong>mais valiosa</strong> (dados). Clique em cada camada:</p>
+        <div class="layers__list">
+          <button class="layer-btn active" data-layer="0"><span>1</span> Físico</button>
+          <button class="layer-btn" data-layer="1"><span>2</span> Identidade &amp; Acesso</button>
+          <button class="layer-btn" data-layer="2"><span>3</span> Perímetro</button>
+          <button class="layer-btn" data-layer="3"><span>4</span> Rede</button>
+          <button class="layer-btn" data-layer="4"><span>5</span> Aplicação</button>
+          <button class="layer-btn" data-layer="5"><span>6</span> Dados</button>
+        </div>
+
+        <div class="layer-detail" id="layerDetail">
+          <div class="layer-detail__emoji">🏢</div>
+          <h4>Camada Física</h4>
+          <p class="layer-detail__child">A portaria do prédio, a fechadura da sala dos servidores, as câmeras. Se alguém entrar e levar o computador... 🙈</p>
+          <div class="layer-detail__senior">
+            <span class="tag tag--senior">⚡ Nível Sênior</span>
+            <p>Proteção física dos datacenters da Microsoft: <strong>acesso controlado por biometria</strong>, guardas 24/7, monitoramento por câmeras, redundância de energia e climatização. Nos datacenters do Azure, esta camada é responsabilidade <strong>da Microsoft</strong>.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout--key reveal">
+        <strong>🔑 Conceito-chave:</strong> O objetivo não é ter uma camada <em>perfeita</em>, mas sim <strong>várias camadas</strong> que se completam. É por isso que mesmo com firewall (camada de perímetro), você ainda usa MFA (camada de identidade) e criptografia (camada de dados).
+      </div>
+    </div>
+
+    <button class="lesson__done reveal" data-complete="aula-3">
+      <span class="lesson__done-check">✓</span> Marcar aula como concluída
+    </button>
+  </section>
+
+  <!-- ============================================================
+       AULA 4 — IDENTIDADE: AUTHN vs AUTHZ
+       ============================================================ -->
+  <section class="lesson" id="aula-4">
+    <div class="lesson__head reveal">
+      <span class="lesson__num">Aula 04</span>
+      <h2>🎭 Identidade — Autenticação vs. Autorização</h2>
+      <p class="lesson__intro">Os dois termos mais confundidos da prova. Vamos separá-los de vez com uma analogia inesquecível.</p>
+    </div>
+
+    <div class="lesson__body">
+      <div class="story reveal">
+        <div class="story__icon">🎶</div>
+        <h3>Imagine assim...</h3>
+        <p>
+          Você vai a uma <strong>balada VIP</strong>. Na porta, o segurança faz duas perguntas bem diferentes:
+          <br /><br />
+          🔹 <strong>"Quem é você?"</strong> → você mostra a identidade. Isso é <strong>AUTENTICAÇÃO</strong>.<br />
+          🔹 <strong>"O que você pode fazer aqui?"</strong> → você tem pulseira VIP? Pode entrar no camarote? Isso é <strong>AUTORIZAÇÃO</strong>.
+        </p>
+      </div>
+
+      <div class="auth-compare reveal">
+        <div class="auth-card auth-card--n">
+          <div class="auth-card__big">Auth<b>N</b></div>
+          <h4>Autenticação <em>(Authentication)</em></h4>
+          <p class="auth-card__q">"Quem é você?" 🪪</p>
+          <p class="auth-card__child">Provar que você é quem diz ser. Mostrar a identidade.</p>
+          <div class="auth-card__senior">
+            <span class="tag tag--senior">⚡ Sênior</span>
+            <p>Verifica a <strong>identidade</strong>. Ferramentas: senha, MFA, biometria, certificados, FIDO2. Falha aqui = <strong>impostor</strong> entra.</p>
+          </div>
+        </div>
+
+        <div class="vs">vs</div>
+
+        <div class="auth-card auth-card--z">
+          <div class="auth-card__big">Auth<b>Z</b></div>
+          <h4>Autorização <em>(Authorization)</em></h4>
+          <p class="auth-card__q">"O que pode fazer?" 🎫</p>
+          <p class="auth-card__child">Decidir o que você tem permissão de acessar ou fazer.</p>
+          <div class="auth-card__senior">
+            <span class="tag tag--senior">⚡ Sênior</span>
+            <p>Concede <strong>permissões</strong>. Ferramentas: RBAC (papéis), políticas de acesso, ACLs. Falha aqui = usuário legítimo acessa o que <strong>não devia</strong> (privilege escalation).</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="concepts-grid reveal">
+        <div class="concept-mini">
+          <h5>🔑 SSO — Single Sign-On</h5>
+          <p><em>Criança:</em> Uma única chave que abre todas as portas da escola.</p>
+          <p><em>Sênior:</em> Uma autenticação → acesso a múltiplos apps sem novo login. Reduz senhas e fadiga.</p>
+        </div>
+        <div class="concept-mini">
+          <h5>🤝 Federação</h5>
+          <p><em>Criança:</em> Sua carteirinha do clube vale na churrascaria parceira também.</p>
+          <p><em>Sênior:</em> <strong>Estabelecimento de confiança</strong> entre organizações. Protocolos: SAML, OAuth 2.0, OIDC. Um IdP emita tokens aceitos por terceiros.</p>
+        </div>
+      </div>
+
+      <div class="callout callout--warning reveal">
+        <strong>⚠️ Cuidado na prova:</strong> A ordem é SEMPRE <strong>AuthN primeiro, AuthZ depois</strong>. Você só pode decidir o que alguém pode fazer <em>depois</em> de confirmar quem é essa pessoa!
+      </div>
+    </div>
+
+    <button class="lesson__done reveal" data-complete="aula-4">
+      <span class="lesson__done-check">✓</span> Marcar aula como concluída
+    </button>
+  </section>
+
+  <!-- ============================================================
+       AULA 5 — MODELOS DE NUVEM & RESPONSABILIDADE
+       ============================================================ -->
+  <section class="lesson" id="aula-5">
+    <div class="lesson__head reveal">
+      <span class="lesson__num">Aula 05</span>
+      <h2>🏠 Responsabilidade Compartilhada na Nuvem</h2>
+      <p class="lesson__intro">Na nuvem, a segurança é dividida. Quem cuida do quê? Depende do modelo: IaaS, PaaS ou SaaS.</p>
+    </div>
+
+    <div class="lesson__body">
+      <div class="story reveal">
+        <div class="story__icon">🏠</div>
+        <h3>Imagine assim... (a analogia da moradia)</h3>
+        <p>Quanto mais "pronto" você contrata, menos você precisa cuidar:</p>
+      </div>
+
+      <div class="house-grid reveal">
+        <div class="house house--iaas">
+          <div class="house__emoji">🏗️</div>
+          <h4>IaaS</h4>
+          <p class="house__child"><strong>"Terreno + alicerce"</strong></p>
+          <p>A Microsoft entrega o prédio e a infraestrutura. <strong>Você</strong> cuida do resto: sistema operacional, apps, dados, configurações.</p>
+          <p class="house__ex"><em>Ex:</em> Azure Virtual Machines (VMs)</p>
+        </div>
+        <div class="house house--paas">
+          <div class="house__emoji">🛋️</div>
+          <h4>PaaS</h4>
+          <p class="house__child"><strong>"Apartamento mobiliado"</strong></p>
+          <p>A Microsoft entrega a plataforma pronta. <strong>Você</strong> só coloca seu app e seus dados. Não se preocupa com SO nem servidor.</p>
+          <p class="house__ex"><em>Ex:</em> Azure SQL Database, App Service</p>
+        </div>
+        <div class="house house--saas">
+          <div class="house__emoji">🏨</div>
+          <h4>SaaS</h4>
+          <p class="house__child"><strong>"Hotel completo"</strong></p>
+          <p>A Microsoft cuida de absolutamente tudo. <strong>Você</strong> só usa, e cuida dos seus dados e de quem acessa.</p>
+          <p class="house__ex"><em>Ex:</em> Microsoft 365, Outlook, Teams</p>
+        </div>
+      </div>
+
+      <div class="responsibility reveal">
+        <h3>📊 A Regra de Ouro da Responsabilidade</h3>
+        <div class="resp-row resp-row--header">
+          <span>Camada</span>
+          <span>On-prem (local)</span>
+          <span>IaaS</span>
+          <span>PaaS</span>
+          <span>SaaS</span>
+        </div>
+        <div class="resp-row">
+          <span>🔐 Dados</span>
+          <span class="you">Você</span>
+          <span class="you">Você</span>
+          <span class="you">Você</span>
+          <span class="you">Você</span>
+        </div>
+        <div class="resp-row">
+          <span>💻 Sistema Operacional</span>
+          <span class="you">Você</span>
+          <span class="you">Você</span>
+          <span class="ms">MS</span>
+          <span class="ms">MS</span>
+        </div>
+        <div class="resp-row">
+          <span>⚙️ Aplicação</span>
+          <span class="you">Você</span>
+          <span class="you">Você</span>
+          <span class="you">Você</span>
+          <span class="ms">MS</span>
+        </div>
+        <div class="resp-row">
+          <span>🖥️ Hardware / Rede</span>
+          <span class="you">Você</span>
+          <span class="ms">MS</span>
+          <span class="ms">MS</span>
+          <span class="ms">MS</span>
+        </div>
+        <div class="resp-row">
+          <span>🏢 Datacenter físico</span>
+          <span class="you">Você</span>
+          <span class="ms">MS</span>
+          <span class="ms">MS</span>
+          <span class="ms">MS</span>
+        </div>
+        <div class="resp-legend">
+          <span class="legend"><span class="dot dot--you"></span> Responsabilidade do Cliente</span>
+          <span class="legend"><span class="dot dot--ms"></span> Responsabilidade da Microsoft</span>
+        </div>
+      </div>
+
+      <div class="callout callout--key reveal">
+        <strong>🔑 Decore:</strong> Os <strong>dados SEMPRE são responsabilidade do cliente</strong> — em qualquer modelo. E a camada <strong>física do datacenter SEMPRE é da Microsoft</strong> (na nuvem). O resto varia conforme IaaS/PaaS/SaaS.
+      </div>
+    </div>
+
+    <button class="lesson__done reveal" data-complete="aula-5">
+      <span class="lesson__done-check">✓</span> Marcar aula como concluída
+    </button>
+  </section>
+
+  <!-- ============================================================
+       AULA 6 — CONFORMIDADE
+       ============================================================ -->
+  <section class="lesson" id="aula-6">
+    <div class="lesson__head reveal">
+      <span class="lesson__num">Aula 06</span>
+      <h2>📋 Conformidade — Seguindo as Regras do Jogo</h2>
+      <p class="lesson__intro">Segurança é proteger. Conformidade é provar que você está seguindo as regras exigidas por leis e regulamentos.</p>
+    </div>
+
+    <div class="lesson__body">
+      <div class="story reveal">
+        <div class="story__icon">🎮</div>
+        <h3>Imagine assim...</h3>
+        <p>
+          Pense numa escola com regras: usar uniforme, não usar celular em prova, chegar no horário.
+          <strong>Segurança</strong> é trancar a porta do armário pra ninguém roubar seu material.
+          <strong>Conformidade</strong> é seguir as regras que a diretora e a lei exigem — e poder <em>provar</em> com documentos que cumpriu.
+        </p>
+      </div>
+
+      <div class="compliance-vs reveal">
+        <div class="cv-card">
+          <h4>🔒 Segurança <em>(Security)</em></h4>
+          <p>"Estou protegendo meus dados de ataques e incidentes?"</p>
+          <p class="cv-focus">Foco: <strong>proteção técnica</strong> — firewalls, MFA, criptografia.</p>
+        </div>
+        <div class="cv-card">
+          <h4>📑 Conformidade <em>(Compliance)</em></h4>
+          <p>"Estou seguindo as leis, normas e regulamentos exigidos?"</p>
+          <p class="cv-focus">Foco: <strong>regras e documentação</strong> — GDPR, LGPD, HIPAA, ISO 27001.</p>
+        </div>
+      </div>
+
+      <div class="terms-grid reveal">
+        <h3>📖 Glossário essencial (decora esses termos!)</h3>
+        <div class="term">
+          <h5>📜 Regulamento / Lei</h5>
+          <p>Uma regra obrigatória imposta por um governo. <em>Ex:</em> <strong>LGPD</strong> (Brasil), <strong>GDPR</strong> (Europa), <strong>HIPAA</strong> (saúde nos EUA).</p>
+        </div>
+        <div class="term">
+          <h5>📐 Padrão / Norma</h5>
+          <p>Um conjunto de boas práticas, geralmente <em>opcional</em>. <em>Ex:</em> <strong>ISO 27001</strong>, <strong>NIST</strong>. Seguir um padrão ajuda a cumprir regulamentos.</p>
+        </div>
+        <div class="term">
+          <h5>🔍 Auditoria</h5>
+          <p>A "inspeção da diretoria". Uma verificação independente pra confirmar que você segue as regras. Gera um <strong>relatório de auditoria</strong>.</p>
+        </div>
+        <div class="term">
+          <h5>🏅 Attestation</h5>
+          <p>O "atestado". Uma declaração formal (de um auditor) confirmando: "sim, essa empresa cumpre os requisitos". Ex: <strong>SOC</strong>, <strong>ISO</strong> certificates.</p>
+        </div>
+        <div class="term">
+          <h5>🏷️ Data Residency / Soberania</h5>
+          <p>Os dados ficam <em>fisicamente</em> onde? Algumas leis exigem que dados de cidadãos fiquem dentro do país. <strong>Residency</strong> = local; <strong>Sovereignty</strong> = sujeito às leis do local.</p>
+        </div>
+        <div class="term">
+          <h5>🌐 Privacy (Privacidade)</h5>
+          <p>O direito do titular sobre seus dados pessoais: acessar, corrigir, excluir (<strong>"direito ao esquecimento"</strong>). Pilar central da LGPD/GDPR.</p>
+        </div>
+      </div>
+
+      <div class="callout callout--tip reveal">
+        <strong>🧠 Onde a Microsoft prova sua conformidade?</strong> No <strong>Microsoft Service Trust Portal (STP)</strong> — lá ficam relatórios de auditoria, atestados e whitepapers. Essa é a "pasta de documentos" que clientes auditores consultam. (Veremos a fundo no Módulo 4!)
+      </div>
+    </div>
+
+    <button class="lesson__done reveal" data-complete="aula-6">
+      <span class="lesson__done-check">✓</span> Marcar aula como concluída
+    </button>
+  </section>
+
+  <!-- ============================================================
+       QUIZ (PT) — Quiz local em português
+       ============================================================ -->
+  <section class="lesson" id="quiz">
+    <div class="lesson__head reveal">
+      <span class="lesson__num">🎯 Desafio Final</span>
+      <h2>Quiz — Teste o que você aprendeu!</h2>
+      <p class="lesson__intro">6 perguntas no estilo da prova SC-900. Veja sua pontuação ao final.</p>
+    </div>
+
+    <!-- Banner: Quiz em Inglês -->
+    <a href="quiz-1.html" class="en-quiz-banner reveal">
+      <div class="en-quiz-banner__icon">🇺🇸</div>
+      <div class="en-quiz-banner__body">
+        <h3>Quiz em Inglês (10 questões) — Treine para a prova real!</h3>
+        <p>A prova SC-900 é em inglês. Pratique com 10 perguntas que mais caem no Módulo 1, com tradução e vocabulário.</p>
+      </div>
+      <div class="en-quiz-banner__cta">Acessar →</div>
+    </a>
+
+    <div class="quiz reveal" id="quizContainer">
+      <!-- Gerado via JS -->
+    </div>
+
+    <div class="quiz-result" id="quizResult" hidden>
+      <div class="quiz-result__score" id="quizScore">0/6</div>
+      <p class="quiz-result__msg" id="quizMsg"></p>
+      <button class="btn btn--ghost" id="quizRetry">🔄 Refazer quiz</button>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <a href="index.html" class="btn btn--primary" style="margin-bottom:18px;">
+        ← Voltar ao Blueprint
+      </a>
+      <p class="footer__motto">"Se você pode explicar para uma criança, você realmente entendeu." — Albert Einstein (atribuído)</p>
+      <p class="footer__note">Módulo 1 · Conceitos de Segurança, Conformidade e Identidade · SC-900</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+  <script src="modulo-1.js"></script>
+</body>
+</html>

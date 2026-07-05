@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz · SC-900 Module 1 (English Mode) 🔤</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="modulo-1.css" />
+  <link rel="stylesheet" href="quiz-1.css" />
+</head>
+<body>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="glow glow--1" aria-hidden="true"></div>
+  <div class="glow glow--2" aria-hidden="true"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="nav">
+    <a href="index.html" class="nav__brand">
+      <div class="nav__logo">
+        <svg viewBox="0 0 23 23" fill="none" aria-hidden="true">
+          <rect x="1" y="1" width="9.5" height="9.5" fill="#F25022"/>
+          <rect x="12.5" y="1" width="9.5" height="9.5" fill="#7FBA00"/>
+          <rect x="1" y="12.5" width="9.5" height="9.5" fill="#00A4EF"/>
+          <rect x="12.5" y="12.5" width="9.5" height="9.5" fill="#FFB900"/>
+        </svg>
+      </div>
+      <div class="nav__title">
+        <strong>SC-900</strong>
+        <span>Module 1 Quiz · EN 🇺🇸</span>
+      </div>
+    </a>
+    <nav class="nav__links">
+      <a href="modulo-1.html">← Lessons</a>
+      <a href="#vocab">Vocabulary</a>
+      <a href="#quiz">Start Quiz</a>
+    </nav>
+    <div class="nav__chip" id="quizChip">
+      <span class="nav__chip-dot"></span>
+      <span id="quizChipText">Ready · 0/10</span>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="q-hero">
+    <div class="q-hero__inner">
+      <span class="badge reveal"><span class="badge__pulse"></span>English Exam Mode · Module 1 🔤</span>
+      <h1 class="q-hero__title reveal">Quiz in <span class="en-flag">English</span> 🇺🇸</h1>
+      <p class="q-hero__subtitle reveal">
+        The real SC-900 exam is in English. Here you train <strong>both</strong> the content <em>and</em> the language.
+        10 questions on the most frequently tested topics — with translation and vocabulary help. 💪
+      </p>
+
+      <div class="q-hero__meta reveal">
+        <div class="qm"><span class="qm__num">10</span><span class="qm__label">Questions</span></div>
+        <div class="qm"><span class="qm__num">~10</span><span class="qm__label">Minutes</span></div>
+        <div class="qm"><span class="qm__num">70%</span><span class="qm__label">To pass</span></div>
+        <div class="qm"><span class="qm__num">EN</span><span class="qm__label">Language</span></div>
+      </div>
+
+      <div class="q-hero__cta reveal">
+        <a href="#quiz" class="btn btn--primary">Start Quiz →</a>
+        <a href="#vocab" class="btn btn--ghost">📚 Study Vocabulary first</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== VOCABULARY ===================== -->
+  <section class="lesson" id="vocab">
+    <div class="lesson__head reveal">
+      <span class="lesson__num">🔤 Exam Vocabulary</span>
+      <h2>Key Terms in English 🇺🇸 → Português 🇧🇷</h2>
+      <p class="lesson__intro">Master these words before the quiz. Many questions use specific terms that can trick you if you don't know them well.</p>
+    </div>
+
+    <div class="vocab-grid reveal">
+      <div class="vocab-card">
+        <div class="vocab-card__en">Never trust, always verify</div>
+        <div class="vocab-card__pt">Nunca confie, sempre verifique</div>
+        <div class="vocab-card__ex"><em>Zero Trust motto</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">Verify explicitly</div>
+        <div class="vocab-card__pt">Verificar explicitamente</div>
+        <div class="vocab-card__ex"><em>Zero Trust principle</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">Least privilege access</div>
+        <div class="vocab-card__pt">Acesso de menor privilégio</div>
+        <div class="vocab-card__ex"><em>Minimum access needed</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">Assume breach</div>
+        <div class="vocab-card__pt">Assumir a violação</div>
+        <div class="vocab-card__ex"><em>Act as if already hacked</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">Authentication</div>
+        <div class="vocab-card__pt">Autenticação</div>
+        <div class="vocab-card__ex"><em>"Who are you?"</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">Authorization</div>
+        <div class="vocab-card__pt">Autorização</div>
+        <div class="vocab-card__ex"><em>"What can you do?"</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">Defense in depth</div>
+        <div class="vocab-card__pt">Defesa em profundidade</div>
+        <div class="vocab-card__ex"><em>Layered protection</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">Confidentiality</div>
+        <div class="vocab-card__pt">Confidencialidade</div>
+        <div class="vocab-card__ex"><em>Only authorized access</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">Integrity</div>
+        <div class="vocab-card__pt">Integridade</div>
+        <div class="vocab-card__ex"><em>Data not altered</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">Availability</div>
+        <div class="vocab-card__pt">Disponibilidade</div>
+        <div class="vocab-card__ex"><em>Accessible when needed</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">Encryption at rest</div>
+        <div class="vocab-card__pt">Criptografia em repouso</div>
+        <div class="vocab-card__ex"><em>Stored data (AES-256)</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">Encryption in transit</div>
+        <div class="vocab-card__pt">Criptografia em trânsito</div>
+        <div class="vocab-card__ex"><em>Data moving (TLS)</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">Regulatory compliance</div>
+        <div class="vocab-card__pt">Conformidade regulatória</div>
+        <div class="vocab-card__ex"><em>Following laws (GDPR)</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">Data residency</div>
+        <div class="vocab-card__pt">Residência de dados</div>
+        <div class="vocab-card__ex"><em>Where data lives</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">Single Sign-On (SSO)</div>
+        <div class="vocab-card__pt">Login único</div>
+        <div class="vocab-card__ex"><em>One login, many apps</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">Shared responsibility</div>
+        <div class="vocab-card__pt">Responsabilidade compartilhada</div>
+        <div class="vocab-card__ex"><em>Cloud divides duties</em></div>
+      </div>
+    </div>
+
+    <div class="callout callout--tip reveal" style="margin-top: 30px;">
+      <strong>💡 Exam tip:</strong> Watch out for words like <em>"ensure"</em> (garantir), <em>"prevent"</em> (prevenir), <em>"allow"</em> (permitir), <em>"requires"</em> (exige). They often define the correct answer!
+    </div>
+  </section>
+
+  <!-- ===================== QUIZ ===================== -->
+  <section class="lesson" id="quiz">
+    <div class="lesson__head reveal">
+      <span class="lesson__num">📝 The Quiz</span>
+      <h2>10 Questions · Most-Tested Topics</h2>
+      <p class="lesson__intro">All questions are in English (like the real exam). Use the <strong>🇧🇷 Translate</strong> button if you need help. Good luck! 🍀</p>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="quiz-toolbar reveal">
+      <div class="quiz-toolbar__progress">
+        <span>Progress</span>
+        <div class="quiz-dots" id="quizDots"><!-- JS --></div>
+      </div>
+      <div class="quiz-toolbar__score">
+        Score: <strong id="liveScore">0</strong> / 10
+      </div>
+    </div>
+
+    <div class="quiz" id="quizContainer"><!-- JS --></div>
+
+    <!-- Result -->
+    <div class="quiz-result" id="quizResult" hidden>
+      <div class="quiz-result__icon" id="resultIcon">🎉</div>
+      <div class="quiz-result__score" id="quizScore">0/10</div>
+      <div class="quiz-result__grade" id="quizGrade"></div>
+      <p class="quiz-result__msg" id="quizMsg"></p>
+      <div class="quiz-result__actions">
+        <button class="btn btn--primary" id="quizRetry">🔄 Try Again</button>
+        <a href="#vocab" class="btn btn--ghost">📚 Review Vocabulary</a>
+        <a href="modulo-1.html" class="btn btn--ghost">📖 Review Lessons</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <a href="index.html" class="btn btn--ghost" style="margin-bottom:18px;">← Back to Blueprint</a>
+      <p class="footer__motto">"The expert in anything was once a beginner." — Helen Hayes</p>
+      <p class="footer__note">SC-900 · Module 1 Quiz · English Training Mode</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <script src="quiz-1.js"></script>
+</body>
+</html>

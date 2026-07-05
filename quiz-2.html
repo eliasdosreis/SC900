@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz · SC-900 Module 2 · Entra ID (English Mode) 🔤</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="modulo-2.css" />
+  <link rel="stylesheet" href="quiz-2.css" />
+</head>
+<body>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="glow glow--1" aria-hidden="true"></div>
+  <div class="glow glow--2" aria-hidden="true"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="nav">
+    <a href="index.html" class="nav__brand">
+      <div class="nav__logo">
+        <svg viewBox="0 0 23 23" fill="none" aria-hidden="true">
+          <rect x="1" y="1" width="9.5" height="9.5" fill="#F25022"/>
+          <rect x="12.5" y="1" width="9.5" height="9.5" fill="#7FBA00"/>
+          <rect x="1" y="12.5" width="9.5" height="9.5" fill="#00A4EF"/>
+          <rect x="12.5" y="12.5" width="9.5" height="9.5" fill="#FFB900"/>
+        </svg>
+      </div>
+      <div class="nav__title">
+        <strong>SC-900</strong>
+        <span>Module 2 Quiz · EN 🇺🇸</span>
+      </div>
+    </a>
+    <nav class="nav__links">
+      <a href="modulo-2.html">← Lessons</a>
+      <a href="#vocab">Vocabulary</a>
+      <a href="#quiz">Start Quiz</a>
+    </nav>
+    <div class="nav__chip" id="quizChip">
+      <span class="nav__chip-dot"></span>
+      <span id="quizChipText">Ready · 0/10</span>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="q-hero">
+    <div class="q-hero__inner">
+      <span class="badge reveal"><span class="badge__pulse"></span>English Exam Mode · Module 2 🔤</span>
+      <h1 class="q-hero__title reveal">Quiz: <span class="en-flag">Entra ID</span> 🇺🇸</h1>
+      <p class="q-hero__subtitle reveal">
+        Entra ID is the <strong>most heavily tested domain</strong> on the SC-900 exam. These 10 questions focus on the
+        highest-yield topics: Conditional Access, MFA, PIM, Identity Protection, B2B/B2C. Train your English as you go. 💪
+      </p>
+
+      <div class="q-hero__meta reveal">
+        <div class="qm"><span class="qm__num">10</span><span class="qm__label">Questions</span></div>
+        <div class="qm"><span class="qm__num">~10</span><span class="qm__label">Minutes</span></div>
+        <div class="qm"><span class="qm__num">70%</span><span class="qm__label">To pass</span></div>
+        <div class="qm"><span class="qm__num">EN</span><span class="qm__label">Language</span></div>
+      </div>
+
+      <div class="q-hero__cta reveal">
+        <a href="#quiz" class="btn btn--primary">Start Quiz →</a>
+        <a href="#vocab" class="btn btn--ghost">📚 Study Vocabulary first</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== VOCABULARY ===================== -->
+  <section class="lesson" id="vocab">
+    <div class="lesson__head reveal">
+      <span class="lesson__num">🔤 Exam Vocabulary</span>
+      <h2>Key Terms in English 🇺🇸 → Português 🇧🇷</h2>
+      <p class="lesson__intro">Master these Entra ID terms before the quiz. They appear constantly in the real exam.</p>
+    </div>
+
+    <div class="vocab-grid reveal">
+      <div class="vocab-card">
+        <div class="vocab-card__en">Tenant</div>
+        <div class="vocab-card__pt">Locatário / Instância</div>
+        <div class="vocab-card__ex"><em>Your org's Entra ID instance</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">Conditional Access</div>
+        <div class="vocab-card__pt">Acesso Condicional</div>
+        <div class="vocab-card__ex"><em>If-then access policies</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">Multi-Factor Authentication (MFA)</div>
+        <div class="vocab-card__pt">Autenticação multifator</div>
+        <div class="vocab-card__ex"><em>2+ proof methods</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">Passwordless</div>
+        <div class="vocab-card__pt">Sem senha</div>
+        <div class="vocab-card__ex"><em>Biometrics, FIDO2, app</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">Self-Service Password Reset (SSPR)</div>
+        <div class="vocab-card__pt">Redefinição de senha por autoatendimento</div>
+        <div class="vocab-card__ex"><em>Users reset own password</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">Privileged Identity Management (PIM)</div>
+        <div class="vocab-card__pt">Gerenciamento de identidade privilegiada</div>
+        <div class="vocab-card__ex"><em>Just-in-time admin access</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">Identity Protection</div>
+        <div class="vocab-card__pt">Proteção de Identidade</div>
+        <div class="vocab-card__ex"><em>Detects user/sign-in risk</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">Access Reviews</div>
+        <div class="vocab-card__pt">Revisões de Acesso</div>
+        <div class="vocab-card__ex"><em>Periodic access validation</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">Entitlement Management</div>
+        <div class="vocab-card__pt">Gerenciamento de Direitos</div>
+        <div class="vocab-card__ex"><em>Access packages lifecycle</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">Guest user</div>
+        <div class="vocab-card__pt">Usuário convidado</div>
+        <div class="vocab-card__ex"><em>External collaborator (B2B)</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">B2B collaboration</div>
+        <div class="vocab-card__pt">Colaboração entre empresas</div>
+        <div class="vocab-card__ex"><em>Partner org users</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">B2C</div>
+        <div class="vocab-card__pt">Consumidores finais</div>
+        <div class="vocab-card__ex"><em>Millions of customers</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">Device join</div>
+        <div class="vocab-card__pt">Ingresso de dispositivo</div>
+        <div class="vocab-card__ex"><em>Registered / Joined / Hybrid</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">Role-Based Access Control (RBAC)</div>
+        <div class="vocab-card__pt">Controle de acesso baseado em função</div>
+        <div class="vocab-card__ex"><em>Permissions by role</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">Just-in-time (JIT)</div>
+        <div class="vocab-card__pt">No momento exato</div>
+        <div class="vocab-card__ex"><em>Activate role when needed</em></div>
+      </div>
+      <div class="vocab-card">
+        <div class="vocab-card__en">Least privilege</div>
+        <div class="vocab-card__pt">Menor privilégio</div>
+        <div class="vocab-card__ex"><em>Minimum access needed</em></div>
+      </div>
+    </div>
+
+    <div class="callout callout--tip reveal" style="margin-top: 30px;">
+      <strong>💡 Exam tip:</strong> In Entra ID questions, watch for <em>"enforce"</em> (impor), <em>"require"</em> (exigir),
+      <em>"eligible"</em> (elegível — hint for PIM!), <em>"compliant device"</em> (dispositivo em conformidade),
+      and <em>"grant/block"</em> (conceder/bloquear — Conditional Access decisions).
+    </div>
+  </section>
+
+  <!-- ===================== QUIZ ===================== -->
+  <section class="lesson" id="quiz">
+    <div class="lesson__head reveal">
+      <span class="lesson__num">📝 The Quiz</span>
+      <h2>10 Questions · Most-Tested Entra ID Topics</h2>
+      <p class="lesson__intro">All questions are in English (like the real exam). Use the <strong>🇧🇷 Translate</strong> button if you need help. Good luck! 🍀</p>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="quiz-toolbar reveal">
+      <div class="quiz-toolbar__progress">
+        <span>Progress</span>
+        <div class="quiz-dots" id="quizDots"></div>
+      </div>
+      <div class="quiz-toolbar__score">
+        Score: <strong id="liveScore">0</strong> / 10
+      </div>
+    </div>
+
+    <div class="quiz" id="quizContainer"></div>
+
+    <!-- Result -->
+    <div class="quiz-result" id="quizResult" hidden>
+      <div class="quiz-result__icon" id="resultIcon">🎉</div>
+      <div class="quiz-result__score" id="quizScore">0/10</div>
+      <div class="quiz-result__grade" id="quizGrade"></div>
+      <p class="quiz-result__msg" id="quizMsg"></p>
+      <div class="quiz-result__actions">
+        <button class="btn btn--primary" id="quizRetry">🔄 Try Again</button>
+        <a href="#vocab" class="btn btn--ghost">📚 Review Vocabulary</a>
+        <a href="modulo-2.html" class="btn btn--ghost">📖 Review Lessons</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <a href="index.html" class="btn btn--ghost" style="margin-bottom:18px;">← Back to Blueprint</a>
+      <p class="footer__motto">"Identity is the new control plane." — Microsoft Security</p>
+      <p class="footer__note">SC-900 · Module 2 Quiz · English Training Mode</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <script src="quiz-2.js"></script>
+</body>
+</html>

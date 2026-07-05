@@ -1,0 +1,656 @@
+/* ============================================================
+   SC-900 · MÓDULO 2 — Estilos específicos
+   Capacidades do Microsoft Entra ID
+   ============================================================ */
+
+:root {
+  --c-kid: #ffb86b;     /* laranja — analogia criança */
+  --c-senior: #6bb7ff;  /* azul — nível sênior */
+  --entra-purple: #5b5fc7; /* roxo do Microsoft Entra */
+}
+
+/* ---------- HERO do módulo (reaproveita .m-hero do modulo-1.css via styles) ---------- */
+.m-hero {
+  position: relative;
+  z-index: 1;
+  padding: 80px 24px 40px;
+  text-align: center;
+}
+.m-hero__inner { max-width: 900px; margin: 0 auto; }
+.m-hero__title {
+  font-family: 'Fredoka', var(--font);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  background: linear-gradient(180deg, #fff 0%, #aebfde 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 18px 0;
+}
+.m-hero__subtitle {
+  font-size: 1.08rem;
+  color: var(--text-dim);
+  max-width: 680px;
+  margin: 0 auto 40px;
+}
+.m-hero__subtitle strong { color: var(--accent); }
+
+/* Caminho das aulas */
+.m-hero__path {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+.path-dot {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px 10px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  text-decoration: none;
+  color: var(--text-dim);
+  font-size: 0.88rem;
+  transition: all 0.25s ease;
+}
+.path-dot span {
+  display: grid;
+  place-items: center;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--surface-2);
+  border: 1px solid var(--border-strong);
+  font-weight: 700;
+  font-family: var(--mono);
+  color: var(--accent);
+  font-size: 0.82rem;
+}
+.path-dot em { font-style: normal; font-weight: 500; }
+.path-dot:hover { color: var(--text); border-color: var(--accent); transform: translateY(-2px); }
+.path-dot.completed {
+  background: rgba(127,186,0,0.12);
+  border-color: var(--ms-green);
+}
+.path-dot.completed span {
+  background: var(--ms-green);
+  color: #fff;
+  border-color: var(--ms-green);
+}
+
+/* Progresso do módulo */
+.m-progress-wrap { position: relative; z-index: 1; padding: 0 24px 30px; }
+.m-progress-hint {
+  text-align: center;
+  margin-top: 14px;
+  font-size: 0.88rem;
+  color: var(--text-faint);
+}
+
+/* ============================================================
+   AULAS (Lesson) — reutiliza estrutura do Módulo 1
+   ============================================================ */
+.lesson {
+  position: relative;
+  z-index: 1;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 56px 24px 32px;
+  scroll-margin-top: 80px;
+}
+.lesson__head { text-align: center; margin-bottom: 44px; }
+.lesson__num {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(91,95,199,0.15);
+  border: 1px solid rgba(91,95,199,0.4);
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  color: var(--entra-purple);
+  font-family: var(--mono);
+  margin-bottom: 16px;
+}
+.lesson__head h2 {
+  font-family: 'Fredoka', var(--font);
+  font-size: clamp(1.6rem, 3.5vw, 2.3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+.lesson__intro {
+  font-size: 1.05rem;
+  color: var(--text-dim);
+  max-width: 640px;
+  margin: 0 auto;
+}
+.lesson__body {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.lesson__bar-emoji {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 16px;
+  opacity: 0.7;
+}
+
+/* "Story" — caixa laranja (analogia) */
+.story {
+  background: linear-gradient(135deg, rgba(255,184,107,0.08), rgba(255,184,107,0.02));
+  border: 1px solid rgba(255,184,107,0.25);
+  border-radius: var(--radius);
+  padding: 28px 30px;
+}
+.story__icon { font-size: 2.4rem; margin-bottom: 12px; display: block; }
+.story h3 {
+  font-family: 'Fredoka', var(--font);
+  font-size: 1.2rem;
+  color: var(--c-kid);
+  margin-bottom: 10px;
+}
+.story p { font-size: 1.05rem; line-height: 1.75; color: var(--text); }
+.story strong { color: var(--c-kid); }
+
+/* Tag Sênior */
+.tag {
+  display: inline-block;
+  padding: 3px 11px;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-family: var(--mono);
+  margin-bottom: 8px;
+}
+.tag--senior {
+  background: rgba(107,183,255,0.15);
+  border: 1px solid rgba(107,183,255,0.35);
+  color: var(--c-senior);
+}
+
+/* Callouts */
+.callout {
+  padding: 20px 24px;
+  border-radius: var(--radius-sm);
+  border-left: 4px solid;
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+.callout strong { display: block; margin-bottom: 4px; }
+.callout--tip { background: rgba(127,186,0,0.08); border-color: var(--ms-green); }
+.callout--key { background: rgba(79,142,247,0.08); border-color: var(--accent); }
+.callout--warning { background: rgba(255,185,0,0.08); border-color: var(--ms-yellow); }
+
+/* Botão "Concluir aula" */
+.lesson__done {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 40px auto 0;
+  padding: 13px 26px;
+  background: transparent;
+  border: 2px solid var(--border-strong);
+  border-radius: 100px;
+  color: var(--text-dim);
+  font-family: var(--font);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.lesson__done-check {
+  display: grid;
+  place-items: center;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  font-size: 0.85rem;
+}
+.lesson__done:hover { border-color: var(--accent); color: var(--text); }
+.lesson__done.completed {
+  background: rgba(127,186,0,0.15);
+  border-color: var(--ms-green);
+  color: var(--ms-green);
+}
+.lesson__done.completed .lesson__done-check {
+  background: var(--ms-green);
+  border-color: var(--ms-green);
+  color: #fff;
+}
+
+/* ============================================================
+   AULA 1 — TIPOS DE IDENTIDADE
+   ============================================================ */
+.id-types h3, .auth-evol h3, .ca-flow h3 {
+  font-family: 'Fredoka', var(--font);
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 22px;
+}
+.id-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.id-card {
+  padding: 26px 22px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.id-card:hover { transform: translateY(-5px); border-color: var(--border-strong); }
+.id-card__emoji { font-size: 2.6rem; margin-bottom: 12px; }
+.id-card h4 { font-size: 1.15rem; margin-bottom: 10px; font-family: 'Fredoka', var(--font); }
+.id-card__child { font-size: 0.9rem; color: var(--c-kid); font-style: italic; margin-bottom: 16px; min-height: 40px; }
+.id-card__senior {
+  text-align: left;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+.id-card__senior p { font-size: 0.84rem; color: var(--text-dim); }
+@media (max-width: 760px) { .id-grid { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   AULA 2 — ENTRA ID vs AD
+   ============================================================ */
+.compare-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.cmp-card {
+  padding: 26px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.cmp-card--ad { border-color: rgba(242,80,34,0.25); }
+.cmp-card--entra { border-color: rgba(91,95,199,0.35); }
+.cmp-card__emoji { font-size: 2.4rem; margin-bottom: 10px; }
+.cmp-card h4 { font-family: 'Fredoka', var(--font); font-size: 1.25rem; margin-bottom: 4px; }
+.cmp-card--ad h4 { color: var(--ms-orange); }
+.cmp-card--entra h4 { color: var(--entra-purple); }
+.cmp-card__era { font-size: 0.8rem; color: var(--text-faint); font-style: italic; margin-bottom: 16px; }
+.cmp-card ul { list-style: none; }
+.cmp-card li {
+  padding: 9px 0;
+  font-size: 0.88rem;
+  color: var(--text-dim);
+  border-bottom: 1px dashed var(--border);
+  line-height: 1.5;
+}
+.cmp-card li:last-child { border: none; }
+.cmp-card li strong { color: var(--text); }
+@media (max-width: 760px) { .compare-cards { grid-template-columns: 1fr; } }
+
+/* Connect box */
+.connect-box {
+  padding: 26px;
+  background: linear-gradient(135deg, rgba(91,95,199,0.08), rgba(79,142,247,0.05));
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+}
+.connect-box h4 { font-family: 'Fredoka', var(--font); font-size: 1.15rem; margin-bottom: 12px; }
+.connect-box p { font-size: 0.92rem; color: var(--text-dim); line-height: 1.7; margin-bottom: 18px; }
+.connect-modes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.cmode {
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.cmode strong {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  color: var(--accent);
+}
+.cmode span { font-size: 0.82rem; color: var(--text-dim); line-height: 1.5; }
+@media (max-width: 760px) { .connect-modes { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   AULA 3 — EVOLUÇÃO DA AUTENTICAÇÃO
+   ============================================================ */
+.auth-evol__track {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.auth-gen {
+  position: relative;
+  padding: 26px 22px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-align: center;
+}
+.auth-gen__num {
+  display: inline-grid;
+  place-items: center;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--surface-2);
+  border: 1px solid var(--border-strong);
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-faint);
+  margin-bottom: 12px;
+}
+.auth-gen h4 { font-family: 'Fredoka', var(--font); font-size: 1.2rem; margin-bottom: 8px; }
+.auth-gen__child { font-size: 0.82rem; color: var(--c-kid); font-style: italic; margin-bottom: 12px; }
+.auth-gen p:last-child { font-size: 0.86rem; color: var(--text-dim); }
+.auth-gen--mfa { border-color: rgba(0,164,239,0.3); }
+.auth-gen--mfa .auth-gen__num { background: rgba(0,164,239,0.15); color: var(--ms-blue); border-color: var(--ms-blue); }
+.auth-gen--mfa h4 { color: var(--ms-blue); }
+.auth-gen--pass { border-color: rgba(127,186,0,0.3); }
+.auth-gen--pass .auth-gen__num { background: rgba(127,186,0,0.15); color: var(--ms-green); border-color: var(--ms-green); }
+.auth-gen--pass h4 { color: var(--ms-green); }
+@media (max-width: 760px) { .auth-evol__track { grid-template-columns: 1fr; } }
+
+/* SSPR */
+.sspr-box {
+  padding: 26px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.sspr-box h4 { font-family: 'Fredoka', var(--font); font-size: 1.15rem; margin-bottom: 12px; }
+.sspr-box p { font-size: 0.92rem; color: var(--text-dim); line-height: 1.75; }
+.sspr-box strong { color: var(--accent); }
+
+/* ============================================================
+   AULA 4 — ACESSO CONDICIONAL
+   ============================================================ */
+.ca-flow__grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  gap: 14px;
+  align-items: stretch;
+}
+.ca-stage {
+  padding: 22px;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  text-align: center;
+}
+.ca-stage__emoji { font-size: 2rem; margin-bottom: 10px; }
+.ca-stage h4 { font-family: 'Fredoka', var(--font); font-size: 1rem; margin-bottom: 8px; color: var(--accent); }
+.ca-stage p { font-size: 0.78rem; color: var(--c-kid); font-style: italic; margin-bottom: 12px; }
+.ca-stage ul { list-style: none; text-align: left; }
+.ca-stage li {
+  padding: 5px 0;
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  border-bottom: 1px dashed var(--border);
+}
+.ca-stage li:last-child { border: none; }
+.ca-arrow {
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  color: var(--accent);
+}
+@media (max-width: 880px) {
+  .ca-flow__grid { grid-template-columns: 1fr; }
+  .ca-arrow { transform: rotate(90deg); padding: 4px 0; }
+}
+
+/* Exemplo de política */
+.ca-example {
+  padding: 26px;
+  background: linear-gradient(135deg, rgba(79,142,247,0.06), rgba(91,95,199,0.05));
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+}
+.ca-example h4 { font-family: 'Fredoka', var(--font); font-size: 1.15rem; margin-bottom: 18px; }
+.ca-rule {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 16px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  margin-bottom: 10px;
+}
+.ca-rule--then { border-color: var(--ms-orange); background: rgba(242,80,34,0.06); }
+.ca-rule__label {
+  flex-shrink: 0;
+  padding: 6px 14px;
+  background: var(--surface-2);
+  border: 1px solid var(--border-strong);
+  border-radius: 100px;
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--accent);
+}
+.ca-rule--then .ca-rule__label { background: var(--ms-orange); color: #fff; border-color: var(--ms-orange); }
+.ca-rule__content { font-size: 0.92rem; color: var(--text); line-height: 1.6; }
+.ca-rule__content em { color: var(--text-faint); }
+@media (max-width: 560px) {
+  .ca-rule { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+
+/* ============================================================
+   AULA 5 — GOVERNANÇA & PIM
+   ============================================================ */
+.gov-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+.gov-card {
+  padding: 26px 22px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: transform 0.3s ease;
+}
+.gov-card:hover { transform: translateY(-4px); border-color: var(--border-strong); }
+.gov-card__emoji { font-size: 2.2rem; margin-bottom: 10px; }
+.gov-card h4 { font-family: 'Fredoka', var(--font); font-size: 1.1rem; margin-bottom: 8px; }
+.gov-card__child { font-size: 0.88rem; color: var(--c-kid); font-style: italic; margin-bottom: 14px; }
+.gov-card__senior { padding-top: 12px; border-top: 1px solid var(--border); }
+.gov-card__senior p { font-size: 0.84rem; color: var(--text-dim); }
+@media (max-width: 760px) { .gov-grid { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   AULA 6 — B2B vs B2C
+   ============================================================ */
+.external-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.ext-card {
+  padding: 26px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.ext-card--b2b { border-color: rgba(0,164,239,0.3); }
+.ext-card--b2c { border-color: rgba(255,185,0,0.3); }
+.ext-card__emoji { font-size: 2.4rem; margin-bottom: 10px; }
+.ext-card h4 { font-family: 'Fredoka', var(--font); font-size: 1.4rem; margin-bottom: 4px; }
+.ext-card--b2b h4 { color: var(--ms-blue); }
+.ext-card--b2c h4 { color: var(--ms-yellow); }
+.ext-card__sub { font-size: 0.8rem; color: var(--text-faint); font-style: italic; margin-bottom: 16px; }
+.ext-card__body p { font-size: 0.88rem; color: var(--text-dim); margin-bottom: 12px; line-height: 1.6; }
+.ext-card__body strong { color: var(--text); }
+.ext-card__ex {
+  padding: 12px;
+  background: var(--surface-2);
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem !important;
+  color: var(--text-faint) !important;
+}
+.ext-card__ex code {
+  background: rgba(0,0,0,0.3);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+}
+@media (max-width: 760px) { .external-grid { grid-template-columns: 1fr; } }
+
+/* Tabela comparativa mini */
+.compare-mini {
+  padding: 26px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow-x: auto;
+}
+.compare-mini h4 { font-family: 'Fredoka', var(--font); font-size: 1.1rem; margin-bottom: 16px; text-align: center; }
+.mini-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 480px;
+}
+.mini-table th, .mini-table td {
+  padding: 11px 14px;
+  text-align: left;
+  font-size: 0.86rem;
+  border-bottom: 1px solid var(--border);
+}
+.mini-table th {
+  background: var(--surface-2);
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.82rem;
+}
+.mini-table td:first-child { color: var(--text); font-weight: 500; }
+.mini-table td:not(:first-child) { color: var(--text-dim); }
+
+/* ============================================================
+   QUIZ (PT) + BANNER EN
+   ============================================================ */
+.en-quiz-banner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 26px;
+  margin: 0 auto 28px;
+  max-width: 720px;
+  background: linear-gradient(135deg, rgba(91,95,199,0.1), rgba(127,186,0,0.08));
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+.en-quiz-banner:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: var(--shadow); }
+.en-quiz-banner__icon { font-size: 2.6rem; flex-shrink: 0; }
+.en-quiz-banner__body { flex: 1; }
+.en-quiz-banner__body h3 { font-family: 'Fredoka', var(--font); font-size: 1.1rem; margin-bottom: 4px; }
+.en-quiz-banner__body p { font-size: 0.88rem; color: var(--text-dim); }
+.en-quiz-banner__cta {
+  flex-shrink: 0;
+  padding: 8px 16px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  font-family: var(--mono);
+}
+@media (max-width: 600px) {
+  .en-quiz-banner { flex-direction: column; text-align: center; }
+  .en-quiz-banner__icon { font-size: 2.2rem; }
+}
+
+.quiz { display: flex; flex-direction: column; gap: 22px; }
+.quiz-q {
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.quiz-q__num {
+  font-size: 0.78rem;
+  font-family: var(--mono);
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.quiz-q__text { font-size: 1.02rem; font-weight: 600; margin-bottom: 18px; line-height: 1.5; }
+.quiz-options { display: flex; flex-direction: column; gap: 10px; }
+.quiz-opt {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.92rem;
+  color: var(--text);
+  font-family: var(--font);
+  text-align: left;
+  transition: all 0.2s ease;
+}
+.quiz-opt:hover:not(.disabled) { border-color: var(--accent); background: rgba(79,142,247,0.08); }
+.quiz-opt__letter {
+  flex-shrink: 0;
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--text-dim);
+}
+.quiz-opt.correct {
+  background: rgba(127,186,0,0.12);
+  border-color: var(--ms-green);
+  color: var(--ms-green);
+}
+.quiz-opt.correct .quiz-opt__letter { background: var(--ms-green); color: #fff; border-color: var(--ms-green); }
+.quiz-opt.wrong {
+  background: rgba(242,80,34,0.1);
+  border-color: var(--ms-orange);
+  color: var(--ms-orange);
+}
+.quiz-opt.wrong .quiz-opt__letter { background: var(--ms-orange); color: #fff; border-color: var(--ms-orange); }
+.quiz-opt.disabled { cursor: default; opacity: 0.85; }
+.quiz-q__explain {
+  margin-top: 14px;
+  padding: 14px 16px;
+  background: rgba(79,142,247,0.06);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-sm);
+  font-size: 0.86rem;
+  color: var(--text-dim);
+}
+.quiz-q__explain strong { color: var(--accent); }
+
+.quiz-result {
+  text-align: center;
+  padding: 40px;
+  margin-top: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+}
+.quiz-result__score {
+  font-family: 'Fredoka', var(--font);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.quiz-result__msg { font-size: 1.05rem; color: var(--text-dim); margin-bottom: 22px; max-width: 480px; margin-left: auto; margin-right: auto; }
