@@ -38,6 +38,7 @@
       <a href="#aula-4">Identidade</a>
       <a href="#aula-5">Nuvem</a>
       <a href="#aula-6">Conformidade</a>
+      <a href="#aula-7">Privacidade</a>
       <a href="#quiz">Quiz</a>
     </nav>
   </header>
@@ -61,6 +62,7 @@
         <a href="#aula-4" class="path-dot" data-lesson="4"><span>4</span><em>Identidade</em></a>
         <a href="#aula-5" class="path-dot" data-lesson="5"><span>5</span><em>Modelos de Nuvem</em></a>
         <a href="#aula-6" class="path-dot" data-lesson="6"><span>6</span><em>Conformidade</em></a>
+        <a href="#aula-7" class="path-dot" data-lesson="7"><span>7</span><em>Privacidade &amp; Confiança</em></a>
       </div>
     </div>
   </section>
@@ -511,6 +513,176 @@
     </div>
 
     <button class="lesson__done reveal" data-complete="aula-6">
+      <span class="lesson__done-check">✓</span> Marcar aula como concluída
+    </button>
+  </section>
+
+  <!-- ============================================================
+       AULA 7 — PRIVACIDADE E CONFIANÇA (Microsoft Privacy Statement, Trust Center, 6 Pilares Zero Trust)
+       ============================================================ -->
+  <section class="lesson" id="aula-7">
+    <div class="lesson__head reveal">
+      <span class="lesson__num">Aula 07</span>
+      <h2>🔏 Privacidade, Confiança &amp; os 6 Pilares do Zero Trust</h2>
+      <p class="lesson__intro">A Microsoft publica oficialmente como trata seus dados. E o Zero Trust tem 6 pilares de implantação que você precisa conhecer. Vamos fechar o Módulo 1 com chave de ouro. 🥇</p>
+    </div>
+
+    <div class="lesson__body">
+      <div class="story reveal">
+        <div class="story__icon">🔏</div>
+        <h3>Imagine assim...</h3>
+        <p>
+          Você vai deixar seu filho numa <strong>escola nova</strong>. Antes de matricular, você quer respostas:
+          "Onde fica o prontuário?", "Quem pode ver as notas?", "Vocês vendem meus dados pra terceiros?".
+          Uma escola <strong>transparente</strong> publica um <strong>cartaz na portaria</strong> respondendo tudo isso.
+          <br /><br />
+          A Microsoft faz o mesmo. Ela publica dois documentos públicos que respondem a essas perguntas sobre os
+          SEUS dados na nuvem: o <strong>Microsoft Privacy Statement</strong> (como trata dados pessoais) e o
+          <strong>Microsoft Trust Center</strong> (como protege e atende conformidade). É a "portaria transparente" da Microsoft. 🏫
+        </p>
+      </div>
+
+      <div class="trust-grid reveal">
+        <div class="trust-card">
+          <div class="trust-card__emoji">📜</div>
+          <h4>Microsoft Privacy Statement</h4>
+          <p class="trust-card__child"><em>"O que a Microsoft coleta e por quê."</em></p>
+          <div class="trust-card__senior">
+            <span class="tag tag--senior">⚡ Sênior</span>
+            <p>Documento público que explica <strong>quais dados pessoais</strong> a Microsoft coleta, <strong>como usa</strong>, e os <strong>direitos do titular</strong> (acessar, corrigir, excluir). Aplica-se a produtos de consumo e comerciais. É a base da transparência de privacidade.</p>
+          </div>
+        </div>
+
+        <div class="trust-card">
+          <div class="trust-card__emoji">🏛️</div>
+          <h4>Microsoft Trust Center</h4>
+          <p class="trust-card__child"><em>"O portal da confiança empresarial."</em></p>
+          <div class="trust-card__senior">
+            <span class="tag tag--senior">⚡ Sênior</span>
+            <p>Hub central onde a Microsoft publica tudo sobre <strong>segurança, privacidade e conformidade</strong>. Inclui certificações (ISO, SOC), relatórios de auditoria, ofertas regionais de conformidade e o link para o <strong>Service Trust Portal (STP)</strong>. É o "cartaz da portaria" para clientes corporativos.</p>
+          </div>
+        </div>
+
+        <div class="trust-card">
+          <div class="trust-card__emoji">📊</div>
+          <h4>Service Trust Portal (STP)</h4>
+          <p class="trust-card__child"><em>"A pasta de documentos dos auditores."</em></p>
+          <div class="trust-card__senior">
+            <span class="tag tag--senior">⚡ Sênior</span>
+            <p>Acessado <strong>a partir do Trust Center</strong>, o STP guarda relatórios de auditoria de terceiros, whitepapers e atestados (SOC, ISO 27001). Exige login com conta Microsoft. <strong>Não confunda</strong>: Privacy Statement = dados pessoais; Trust Center/STP = conformidade empresarial.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout--tip reveal">
+        <strong>🧠 Dica de prova:</strong> Pergunta sobre "onde a Microsoft descreve como usa dados pessoais"? → <strong>Microsoft Privacy Statement</strong>. "Onde baixar relatórios de auditoria ISO/SOC"? → <strong>Service Trust Portal (STP)</strong>. "Portal geral de confiança da Microsoft"? → <strong>Trust Center</strong>. Decore essa tríade!
+      </div>
+
+      <!-- Os 6 Pilares de implantação do Zero Trust -->
+      <div class="story reveal" style="margin-top: 40px;">
+        <div class="story__icon">🏛️</div>
+        <h3>Imagine assim... (os 6 pilares)</h3>
+        <p>
+          Lembra do <strong>parque de diversões</strong> da Aula 2? Agora imagine que ele tem <strong>6 setores</strong> diferentes
+          que precisam ser protegidos, cada um com um gerente. Para o parque ser "Zero Trust de verdade", <strong>todos os 6 setores</strong>
+          precisam seguir as 3 regras (verificar, menos privilégio, assumir violação). Se proteger só a entrada e esquecer a montanha-russa...
+          🎢 o ladrão entra mesmo assim.
+        </p>
+      </div>
+
+      <div class="pillars-zt reveal">
+        <h3>Os 6 Pilares de Implantação do Zero Trust</h3>
+        <p class="pillars-zt__sub">Já vimos os <strong>3 princípios</strong> (Aula 2). Agora, os <strong>6 pilares</strong> — as áreas que o Zero Trust protege:</p>
+
+        <div class="zt-pillar-grid">
+          <div class="zt-pillar">
+            <div class="zt-pillar__num">1</div>
+            <div class="zt-pillar__emoji">👤</div>
+            <h5>Identities</h5>
+            <p>Usuários, serviços e contas. Verificar sempre, monitorar risco. <em>É o pilar central!</em></p>
+          </div>
+          <div class="zt-pillar">
+            <div class="zt-pillar__num">2</div>
+            <div class="zt-pillar__emoji">💻</div>
+            <h5>Endpoints / Devices</h5>
+            <p>Dispositivos que acessam dados. Devem estar <strong>compliant</strong> (saudáveis, atualizados).</p>
+          </div>
+          <div class="zt-pillar">
+            <div class="zt-pillar__num">3</div>
+            <div class="zt-pillar__emoji">📱</div>
+            <h5>Applications</h5>
+            <p>Apps SaaS e locais. Descobrir shadow IT, aplicar controles (MAM, segurança no app).</p>
+          </div>
+          <div class="zt-pillar">
+            <div class="zt-pillar__num">4</div>
+            <div class="zt-pillar__emoji">💎</div>
+            <h5>Data</h5>
+            <p>O ativo final. Classificar, rotular, criptografar. Mesmo vazado, fica ilegível.</p>
+          </div>
+          <div class="zt-pillar">
+            <div class="zt-pillar__num">5</div>
+            <div class="zt-pillar__emoji">🏗️</div>
+            <h5>Infrastructure</h5>
+            <p>Servidores, VMs, contêineres. Avaliar configuração, detectar desvios, acesso JIT.</p>
+          </div>
+          <div class="zt-pillar">
+            <div class="zt-pillar__num">6</div>
+            <div class="zt-pillar__emoji">🌐</div>
+            <h5>Networks</h5>
+            <p>Tráfego e segmentação. Micro-segmentação, criptografia em trânsito, monitorar lateral.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout--warning reveal">
+        <strong>⚠️ Pegadinha clássica:</strong> Não confunda <strong>3 princípios</strong> com <strong>6 pilares</strong>!
+        <br />• <strong>Princípios</strong> (o "COMO"): Verify Explicitly, Least Privilege, Assume Breach
+        <br />• <strong>Pilares</strong> (o "O QUE proteger"): Identities, Endpoints, Apps, Data, Infrastructure, Networks
+      </div>
+
+      <!-- Criptografia a fundo -->
+      <div class="story reveal" style="margin-top: 40px;">
+        <div class="story__icon">🔐</div>
+        <h3>Imagine assim... (criptografia na nuvem)</h3>
+        <p>
+          Pense numa <strong>carta confidencial</strong>. A criptografia tem dois momentos críticos:
+          <br /><br />
+          📦 <strong>Em repouso</strong> (na gaveta) — a carta está fechada no envelope. Mesmo que roubem a gaveta, não conseguem ler.
+          <br />✉️ <strong>Em trânsito</strong> (no correio) — a carta viaja dentro de um cofre blindado. Ninguém intercepta no caminho.
+          <br /><br />
+          Na nuvem, ambos precisam estar protegidos. E a Microsoft usa <strong>chaves de criptografia</strong> que são gerenciadas
+          de formas diferentes — você pode deixar a Microsoft cuidar, ou pode trazer a sua própria chave. 🔑
+        </p>
+      </div>
+
+      <div class="crypto-box reveal">
+        <h4>🔐 Criptografia: o resumo técnico</h4>
+        <div class="crypto-grid">
+          <div class="crypto-row">
+            <span class="crypto-row__label">Em repouso <em>(at rest)</em></span>
+            <span class="crypto-row__value"><strong>AES-256</strong> · simétrica · padrão automático no Azure (Storage, SQL, Disk)</span>
+          </div>
+          <div class="crypto-row">
+            <span class="crypto-row__label">Em trânsito <em>(in transit)</em></span>
+            <span class="crypto-row__value"><strong>TLS 1.2+</strong> · assimétrica · entre cliente e servidor, e entre datacenters</span>
+          </div>
+          <div class="crypto-row">
+            <span class="crypto-row__label">Modelo de chave</span>
+            <span class="crypto-row__value"><strong>Microsoft-managed</strong> (padrão) ou <strong>Customer-managed</strong> (CMK via Key Vault) ou <strong>BYOK</strong></span>
+          </div>
+          <div class="crypto-row">
+            <span class="crypto-row__label">Double Key Encryption</span>
+            <span class="crypto-row__value">Duas chaves: Microsoft + cliente. Nem a Microsoft consegue descriptografar. Para dados <em>ultrassecretos</em>.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout--key reveal">
+        <strong>🔑 Conceito-chave:</strong> A Microsoft aplica criptografia <strong>por padrão</strong> (encryption by default) nos serviços do Azure e do Microsoft 365. Você não precisa configurar nada para tê-la — mas pode <strong>trazer sua própria chave</strong> (BYOK/CMK) para controle extra, ou usar <strong>Double Key Encryption</strong> para dados que nem a Microsoft pode ler.
+      </div>
+    </div>
+
+    <button class="lesson__done reveal" data-complete="aula-7">
       <span class="lesson__done-check">✓</span> Marcar aula como concluída
     </button>
   </section>

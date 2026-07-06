@@ -80,7 +80,7 @@ layerButtons.forEach((btn) => {
    PARTE 2 — PROGRESSO DAS AULAS
    ============================================================ */
 const MODULE_KEY = 'sc900_module1_progress_v1';
-const lessons = ['aula-1', 'aula-2', 'aula-3', 'aula-4', 'aula-5', 'aula-6'];
+const lessons = ['aula-1', 'aula-2', 'aula-3', 'aula-4', 'aula-5', 'aula-6', 'aula-7'];
 let lessonState = loadModuleState();
 
 function loadModuleState() {

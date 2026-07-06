@@ -740,3 +740,163 @@
   .en-quiz-banner { flex-direction: column; text-align: center; }
   .en-quiz-banner__icon { font-size: 2.2rem; }
 }
+
+/* ============================================================
+   AULA 7 — PRIVACIDADE, CONFIANÇA & 6 PILARES ZERO TRUST
+   ============================================================ */
+
+/* Trust grid (Privacy Statement / Trust Center / STP) */
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.trust-card {
+  padding: 26px 22px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.trust-card:hover { transform: translateY(-5px); border-color: var(--border-strong); }
+.trust-card__emoji { font-size: 2.6rem; margin-bottom: 12px; }
+.trust-card h4 { font-size: 1.1rem; margin-bottom: 10px; font-family: 'Fredoka', var(--font); }
+.trust-card__child { font-size: 0.9rem; color: var(--c-kid); font-style: italic; margin-bottom: 16px; min-height: 40px; }
+.trust-card__senior {
+  text-align: left;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+.trust-card__senior p { font-size: 0.84rem; color: var(--text-dim); }
+@media (max-width: 760px) { .trust-grid { grid-template-columns: 1fr; } }
+
+/* 6 Pilares do Zero Trust */
+.pillars-zt h3 { font-family: 'Fredoka', var(--font); text-align: center; font-size: 1.3rem; margin-bottom: 8px; }
+.pillars-zt__sub { text-align: center; color: var(--text-dim); font-size: 0.92rem; margin-bottom: 22px; }
+.pillars-zt__sub strong { color: var(--accent); }
+
+.zt-pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.zt-pillar {
+  position: relative;
+  padding: 22px 20px 22px 64px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.zt-pillar:hover { transform: translateY(-4px); border-color: var(--accent); }
+.zt-pillar__num {
+  position: absolute;
+  top: 18px; left: 18px;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.zt-pillar__emoji { font-size: 1.4rem; margin-bottom: 6px; }
+.zt-pillar h5 { font-size: 1rem; margin-bottom: 6px; font-family: 'Fredoka', var(--font); }
+.zt-pillar p { font-size: 0.82rem; color: var(--text-dim); }
+.zt-pillar em { color: var(--accent); font-style: normal; font-weight: 600; }
+@media (max-width: 760px) { .zt-pillar-grid { grid-template-columns: 1fr; } }
+
+/* Caixa de Criptografia */
+.crypto-box {
+  padding: 26px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.crypto-box h4 { font-family: 'Fredoka', var(--font); font-size: 1.15rem; margin-bottom: 16px; }
+.crypto-grid { display: flex; flex-direction: column; gap: 10px; }
+.crypto-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 16px;
+  padding: 14px 16px;
+  background: var(--surface-2);
+  border-radius: var(--radius-sm);
+  align-items: start;
+}
+.crypto-row__label {
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+.crypto-row__label em { color: var(--text-faint); font-style: italic; font-weight: 400; font-size: 0.82rem; }
+.crypto-row__value { font-size: 0.86rem; color: var(--text-dim); line-height: 1.6; }
+.crypto-row__value strong { color: var(--text); }
+@media (max-width: 620px) {
+  .crypto-row { grid-template-columns: 1fr; gap: 4px; }
+}
+
+/* ============================================================
+   "COMO ENSINAR" — Caixa de resumo pedagógico para repassar
+   ============================================================ */
+.teach-box {
+  margin-top: 28px;
+  padding: 22px 24px;
+  background: linear-gradient(135deg, rgba(127,186,0,0.08), rgba(79,142,247,0.05));
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  position: relative;
+}
+.teach-box::before {
+  content: '🎓';
+  position: absolute;
+  top: -14px; left: 22px;
+  font-size: 1.6rem;
+  background: var(--bg);
+  padding: 0 8px;
+}
+.teach-box__title {
+  font-family: 'Fredoka', var(--font);
+  font-size: 1.05rem;
+  margin-bottom: 12px;
+  color: var(--ms-green);
+}
+.teach-box__prompt {
+  font-size: 0.86rem;
+  color: var(--text-faint);
+  font-style: italic;
+  margin-bottom: 12px;
+}
+.teach-box ol {
+  list-style: none;
+  counter-reset: teach;
+}
+.teach-box ol li {
+  counter-increment: teach;
+  position: relative;
+  padding: 8px 0 8px 36px;
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.55;
+  border-bottom: 1px dashed var(--border);
+}
+.teach-box ol li:last-child { border-bottom: none; }
+.teach-box ol li::before {
+  content: counter(teach);
+  position: absolute;
+  left: 0; top: 7px;
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  background: var(--ms-green);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 0.76rem;
+  font-weight: 700;
+  font-family: var(--mono);
+}
+.teach-box ol li strong { color: var(--accent); }
+.teach-box ol li em { color: var(--c-kid); font-style: normal; font-weight: 600; }
