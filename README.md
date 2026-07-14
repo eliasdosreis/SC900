@@ -57,6 +57,7 @@ SC900/
 ├── script.js               # Lógica da página principal (checklist + progresso)
 ├── effects.css             # ⭐ Efeitos visuais globais (tilt, glow, particles, animations)
 ├── effects.js              # ⭐ Interação visual (partículas, tilt 3D, confetti, ripple)
+├── assets/modules/         # Ilustrações otimizadas dos heroes de cada módulo
 │
 ├── modulo-1.html           # Módulo 1 — Aulas interativas (PT)
 ├── modulo-1.css            # Estilos específicos do Módulo 1
@@ -469,6 +470,16 @@ Na seção [Status dos módulos](#-estrutura-atual-dos-módulos), marque o módu
 - Grids de 4 colunas → 2 → 1 conforme a tela diminui
 - Navbar: esconde os links em telas < 760px
 - Sempre testar em mobile (Chrome DevTools → device toolbar)
+
+### Imagens educacionais
+
+- Cada módulo pode ter uma ilustração hero própria em `assets/modules/`, alinhada à cor accent e à analogia principal.
+- Use imagens como reforço de contexto, não como decoração aleatória: o aluno deve reconhecer o domínio antes de ler o título.
+- Sempre inclua `alt` descritivo, dimensões `width`/`height` para evitar layout shift e formato otimizado para web.
+- Prefira composição com poucos elementos, contraste alto e sem texto embutido; traduções e acessibilidade ficam no HTML.
+- Combine a imagem com 2–3 chips emocionais ou verbos de ação, como “Detectar → Investigar → Responder”, para orientar a leitura visual.
+- Evite adicionar uma imagem grande em cada aula. Um hero forte e diagramas HTML/CSS interativos preservam desempenho e clareza.
+- Respeite `prefers-reduced-motion`: zoom e movimentos da imagem devem ser sutis ou desativados pelo sistema global.
 
 ---
 
