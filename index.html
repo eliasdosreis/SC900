@@ -78,15 +78,33 @@
         </div>
       </div>
 
-      <div class="hero__actions reveal">
-        <a href="modulo-3.html" class="btn btn--primary">
-          🛡️ Estudar Módulo 3 — Segurança
-          <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="module-access reveal" aria-label="Acessar módulos disponíveis">
+        <a href="modulo-1.html" class="module-access__card" style="--module-color:#4f8ef7">
+          <span class="module-access__icon">🔐</span>
+          <span class="module-access__status">Disponível</span>
+          <span class="module-access__number">MÓDULO 01 · 10–15%</span>
+          <strong>Conceitos de SCI</strong>
+          <small>Segurança, conformidade e identidade</small>
+          <span class="module-access__action">Acessar módulo <b>→</b></span>
         </a>
-        <a href="modulo-2.html" class="btn btn--ghost">📖 Revisar Módulo 2 — Microsoft Entra ID</a>
+        <a href="modulo-2.html" class="module-access__card" style="--module-color:#8b7cf6">
+          <span class="module-access__icon">👤</span>
+          <span class="module-access__status">Disponível</span>
+          <span class="module-access__number">MÓDULO 02 · 25–30%</span>
+          <strong>Microsoft Entra ID</strong>
+          <small>Identidade, autenticação e governança</small>
+          <span class="module-access__action">Acessar módulo <b>→</b></span>
+        </a>
+        <a href="modulo-3.html" class="module-access__card module-access__card--new" style="--module-color:#f25022">
+          <span class="module-access__icon">🛡️</span>
+          <span class="module-access__status">Novo</span>
+          <span class="module-access__number">MÓDULO 03 · 35–40%</span>
+          <strong>Soluções de Segurança</strong>
+          <small>Defender, Sentinel e proteção no Azure</small>
+          <span class="module-access__action">Acessar módulo <b>→</b></span>
+        </a>
       </div>
       <div class="hero__actions reveal" style="margin-top:14px;">
-        <a href="modulo-1.html" class="btn btn--ghost btn--sm">📘 Módulo 1 — Conceitos de SCI</a>
         <a href="#topics" class="btn btn--ghost btn--sm">Ver checklist de tópicos</a>
         <button class="btn btn--ghost btn--sm" id="resetBtn">🔄 Resetar progresso</button>
       </div>
