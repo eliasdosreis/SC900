@@ -81,7 +81,7 @@ SC900/
 
 | Módulo | Título | Peso | Aulas | Quiz EN | Status |
 |--------|--------|------|-------|---------|--------|
-| **1** | Conceitos de Segurança, Conformidade e Identidade | 10–15% | 6 ✅ | 10 questões ✅ | **CONCLUÍDO** |
+| **1** | Conceitos de Segurança, Conformidade e Identidade | 10–15% | 7 ✅ | 10 questões ✅ | **CONCLUÍDO** |
 | **2** | Capacidades do Microsoft Entra ID | 25–30% | 6 ✅ | 10 questões ✅ | **CONCLUÍDO** |
 | **3** | Soluções de Segurança da Microsoft | 35–40% | 6 ✅ | 10 questões ✅ | **CONCLUÍDO** |
 | **4** | Soluções de Conformidade da Microsoft | 20–25% | — | — | Pendente |
@@ -293,8 +293,8 @@ Use `modulo-1.html` como template. Cada página de módulo deve conter:
 // 1. Chave de localStorage ÚNICA por módulo
 const MODULE_KEY = 'sc900_module{N}_progress_v1';
 
-// 2. Estado das aulas (array com IDs das aulas)
-const lessons = ['aula-1', 'aula-2', ..., 'aula-{N}'];
+// 2. Estado das aulas (array com IDs das L aulas; L não é o número do módulo)
+const lessons = ['aula-1', 'aula-2', ..., 'aula-{L}'];
 let lessonState = loadModuleState();
 
 // 3. Funções: loadModuleState(), saveModuleState()
@@ -366,9 +366,10 @@ const QUESTIONS = [
 
 Após criar um módulo, **sempre adicione/atualize** em `index.html`:
 
-1. **Badge do hero** — atualize para `NOVO · Módulo {N} disponível` (ou `Módulos X & Y disponíveis`)
-2. **Botão principal do hero** — aponte para `modulo-{N}.html`
-3. **Botão secundário** — aponte para o módulo anterior como "revisão"
+1. **Badge do hero** — atualize para `NOVO · Módulo {N} disponível`.
+2. **Card de acesso** — crie um `.module-access__card` com número, peso vigente, título, resumo, cor do módulo e link para `modulo-{N}.html`.
+3. **Módulos anteriores** — preserve todos os cards já publicados; nunca substitua um acesso antigo pelo novo.
+4. **Roadmap e checklist** — confirme que peso e descrição coincidem com o Study Guide e com `DOMAINS[]` em `script.js`.
 
 ### Passo 7 — Importar `effects.css` e `effects.js` em todas as páginas
 
@@ -384,7 +385,7 @@ Em **CADA** `.html` criado:
 <script src="effects.js"></script>
 ```
 
-Páginas existentes que precisam receber (se ainda não têm):
+Páginas existentes que devem ser conferidas:
 - `index.html`
 - `modulo-1.html`
 - `modulo-2.html`
@@ -392,6 +393,8 @@ Páginas existentes que precisam receber (se ainda não têm):
 - `quiz-2.html`
 
 > **Verificação rápida**: abra o HTML e busque por `effects.css` e `effects.js`. Se não encontrar, adicione.
+
+> **Importante**: `script.js` pertence somente ao `index.html`. Cada página de módulo carrega apenas `modulo-{N}.js`; cada quiz carrega apenas `quiz-{N}.js`; `effects.js` fica sempre por último.
 
 ### Passo 8 — Atualizar o `README.md`
 
@@ -480,7 +483,7 @@ Cada `<section class="lesson">` deve seguir esta sequência:
 
 ### 3. Quantidade de aulas por módulo
 
-- **Módulo 1** (concluído): 6 aulas
+- **Módulo 1** (concluído): 7 aulas
 - **Próximos módulos**: **5–7 aulas** cada (proporcional ao peso e conteúdo)
 - Cada aula deve ter **1 analogia central** + 1 callout no mínimo
 
@@ -574,6 +577,32 @@ Antes de marcar um módulo como CONCLUÍDO, verifique:
 - [ ] **Nenhum `display:none`** gambiarra — elementos errados foram deletados
 - [ ] Testado em mobile (responsividade)
 - [ ] **Cor accent do módulo definida** em `modulo-{N}.css` (e diferente dos anteriores)
+
+### Validação de consistência estrutural
+
+Antes de publicar, trate estes quatro lugares como uma única fonte de verdade para a quantidade de aulas:
+
+1. Links `.nav__links` que apontam para `#aula-X`.
+2. Pontos `.path-dot[data-lesson]` no hero.
+3. Seções `<section class="lesson" id="aula-X">` e botões `data-complete="aula-X"`.
+4. Array `lessons[]` em `modulo-{N}.js`.
+
+As quatro contagens e os IDs devem coincidir. Um link para uma aula inexistente quebra a navegação e impede a trilha de representar o progresso real. O ponto do quiz não deve usar `data-lesson`, pois não faz parte do cálculo de conclusão das aulas.
+
+Também valide, para cada quiz:
+
+- Exatamente 10 objetos em `QUESTIONS[]`, cada um com quatro opções e um índice `correct` entre 0 e 3.
+- Exatamente 16 cards de vocabulário.
+- Tradução da pergunta, tradução das opções, explicação em inglês e `ptNote` em português.
+- Resultado com aprovação em `>= 70%`, retry funcional e links de retorno.
+- Nenhum `href="#aula-X"` sem um `id="aula-X"` correspondente.
+
+### Checklist de cobertura contra o Study Guide
+
+- Não use apenas o roadmap antigo do README como fonte. Consulte a versão e a data dos objetivos oficiais antes de criar ou revisar conteúdo.
+- Registre no README a data-base do blueprint usado. Revisão atual: **skills measured as of November 7, 2025**.
+- Faça uma matriz simples “objetivo oficial → aula → questão do quiz” durante a revisão. Um objetivo pode compartilhar uma aula, mas não deve ficar apenas implícito.
+- Dê atenção especial a pares fáceis de confundir: **Entra roles vs Azure RBAC**, **SIEM vs SOAR**, **Defender XDR vs Sentinel**, **CSPM vs workload protection**, **NSG vs Azure Firewall vs WAF** e **governança vs risco vs conformidade**.
 
 ---
 

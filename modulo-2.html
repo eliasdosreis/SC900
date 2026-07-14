@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="modulo-2.css" />
+  <link rel="stylesheet" href="effects.css" />
 </head>
 <body>
   <div class="grid-overlay" aria-hidden="true"></div>
@@ -61,7 +62,6 @@
         <a href="#aula-4" class="path-dot" data-lesson="4"><span>4</span><em>Acesso Condicional</em></a>
         <a href="#aula-5" class="path-dot" data-lesson="5"><span>5</span><em>Governança &amp; PIM</em></a>
       <a href="#aula-6" class="path-dot" data-lesson="6"><span>6</span><em>B2B &amp; B2C</em></a>
-      <a href="#aula-7" class="path-dot" data-lesson="7"><span>7</span><em>Licenças &amp; RBAC</em></a>
     </div>
     </div>
   </section>
@@ -470,6 +470,16 @@
         </div>
 
         <div class="gov-card">
+          <div class="gov-card__emoji">🎭</div>
+          <h4>Entra Roles &amp; Azure RBAC</h4>
+          <p class="gov-card__child"><em>O crachá certo para o prédio certo.</em></p>
+          <div class="gov-card__senior">
+            <span class="tag tag--senior">⚡ Sênior</span>
+            <p><strong>Microsoft Entra roles</strong> administram recursos de identidade, como usuários e grupos. <strong>Azure RBAC</strong> controla ações sobre recursos Azure, como VMs e storage, por escopo. Ambos aplicam acesso baseado em função, mas protegem planos de gerenciamento diferentes.</p>
+          </div>
+        </div>
+
+        <div class="gov-card">
           <div class="gov-card__emoji">🔍</div>
           <h4>Access Reviews</h4>
           <p class="gov-card__child"><em>A inspeção periódica: "Você ainda precisa desse acesso?"</em></p>
@@ -636,5 +646,6 @@
 
   <div class="toast" id="toast"></div>
   <script src="modulo-2.js"></script>
+  <script src="effects.js"></script>
 </body>
 </html>
