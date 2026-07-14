@@ -1,0 +1,4 @@
+/* SC-900 · Quiz 3 — estilos específicos */
+@import url("quiz-2.css");
+:root { --quiz-accent: #f25022; --entra-purple: var(--quiz-accent); }
+.q-hero__badge, .quiz-q__topic { color: var(--quiz-accent); }

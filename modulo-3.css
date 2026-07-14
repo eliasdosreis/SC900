@@ -1,0 +1,22 @@
+/* ============================================================
+   SC-900 · MÓDULO 3 — Estilos específicos
+   ============================================================ */
+@import url("modulo-2.css");
+
+:root {
+  --c-kid: #ffb86b;
+  --c-senior: #6bb7ff;
+  --security-accent: #f25022;
+  --entra-purple: var(--security-accent);
+}
+
+.lesson__num, .m-hero__eyebrow { color: var(--security-accent); }
+.path-dot.completed, .lesson__done.completed { border-color: var(--security-accent); }
+.security-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(210px,1fr)); gap: 1rem; }
+.security-card { padding: 1.15rem; border: 1px solid rgba(242,80,34,.24); border-radius: 16px; background: rgba(18,26,44,.68); }
+.security-card h3 { margin: 0 0 .55rem; }
+.flow-line { display: flex; flex-wrap: wrap; align-items: center; gap: .7rem; margin: 1rem 0; }
+.flow-line span { padding: .65rem .85rem; border: 1px solid rgba(107,183,255,.3); border-radius: 999px; background: rgba(107,183,255,.08); }
+.flow-line b { color: var(--security-accent); }
+
+@media (max-width: 560px) { .security-grid { grid-template-columns: 1fr; } }

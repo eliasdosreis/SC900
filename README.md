@@ -83,8 +83,8 @@ SC900/
 |--------|--------|------|-------|---------|--------|
 | **1** | Conceitos de Segurança, Conformidade e Identidade | 10–15% | 6 ✅ | 10 questões ✅ | **CONCLUÍDO** |
 | **2** | Capacidades do Microsoft Entra ID | 25–30% | 6 ✅ | 10 questões ✅ | **CONCLUÍDO** |
-| **3** | Soluções de Segurança da Microsoft | 30–35% | — | — | Pendente |
-| **4** | Soluções de Conformidade da Microsoft | 25–30% | — | — | Pendente |
+| **3** | Soluções de Segurança da Microsoft | 35–40% | 6 ✅ | 10 questões ✅ | **CONCLUÍDO** |
+| **4** | Soluções de Conformidade da Microsoft | 20–25% | — | — | Pendente |
 
 ---
 
@@ -140,6 +140,12 @@ Para evitar analogias repetidas entre módulos, aqui está o registro:
 | Acesso Condicional | 🎫 Fiscal do trem bala que analisa sinais antes de liberar | 2 |
 | Governança & PIM | 🗝️ Chave-mestra do cofre emprestada só na hora (just-in-time) | 2 |
 | B2B vs B2C | 🤝 Clube exclusivo: B2B=visitante VIP de outra empresa, B2C=clientes da rua no app | 2 |
+| Infraestrutura Azure | 🏙️ Cidade inteligente com bairros, cancelas, alfândega, túnel e cofre | 3 |
+| Defender for Cloud | 🏗️ Inspetor de obras em vários canteiros | 3 |
+| Microsoft Sentinel | 🛰️ Torre de controle que correlaciona radares e executa emergências | 3 |
+| Microsoft Defender XDR | 🧩 Equipe de detetives compartilhando o mural do caso | 3 |
+| Família Defender | 🦸 Hospital com alas especializadas e prontuário unificado | 3 |
+| Vulnerabilidades e Threat Intelligence | 🔬 Oficina preventiva e mapa do tempo das ameaças | 3 |
 
 > **Ao criar novos módulos, invente analogias NOVAS e igualmente memoráveis.**
 
@@ -589,9 +595,9 @@ Antes de marcar um módulo como CONCLUÍDO, verifique:
 
 ---
 
-### Módulo 3 — Soluções de Segurança da Microsoft (30–35%) ⬅️ PRÓXIMO
+### Módulo 3 — Soluções de Segurança da Microsoft (35–40%) ✅ CONCLUÍDO
 
-> **ATENÇÃO**: Este é o módulo de MAIOR peso na prova (30–35%). Priorize!
+> **ATENÇÃO**: Este é o módulo de MAIOR peso na prova (35–40%). Objetivos vigentes desde 7 de novembro de 2025.
 
 **Sub-áreas (do study guide oficial — NÃO são as do Módulo 2!)**:
 
@@ -606,22 +612,17 @@ Antes de marcar um módulo como CONCLUÍDO, verifique:
 - Descrever a proteção de rede no Azure (Azure Firewall, DDoS Protection, NSGs)
 - Descrever o Microsoft Secure Score e recomendações
 
-**Sugestão de aulas (6 aulas)**:
-1. Fundamentos de segurança no Azure (princípios, responsabilidade)
-2. Microsoft Defender XDR — A família unificada
-3. Microsoft Sentinel — SIEM/SOAR na nuvem
-4. Microsoft Defender for Cloud — CSPM multicloud
-5. Proteção de rede (Firewall, DDoS, NSGs)
-6. Microsoft Secure Score + Hardening
+**Aulas criadas (6 aulas)**:
+1. Segurança da infraestrutura Azure (VNet, NSG, Firewall, WAF, DDoS, Bastion e Key Vault)
+2. Microsoft Defender for Cloud (CSPM, políticas, recomendações, Secure Score e workloads)
+3. Microsoft Sentinel (SIEM, SOAR, hunting e playbooks)
+4. Microsoft Defender XDR (correlação, incidentes e portal unificado)
+5. Família Defender (Endpoint, Office 365, Identity e Cloud Apps)
+6. Vulnerability Management, Defender Threat Intelligence e operação
 
-**Sugestão de analogias (a criar — NÃO usar as dos Módulos 1 e 2!)**:
-- Defender XDR = ? (ex: esquadrão de elite com especialistas em cada área)
-- Sentinel = ? (ex: a central de monitoramento com telas gigantes + analistas)
-- Defender for Cloud = ? (ex: o inspetor de obras que verifica conformidade em todas as ferramentas)
-- Azure Firewall = ? (ex: o porteiro eletrônico do condomínio que bloqueia visitantes suspeitos)
-- Secure Score = ? (ex: a nota do seu carro no seguro — quanto mais seguro, menor o preço)
+**Analogias usadas**: cidade inteligente, inspetor de obras, torre de controle, equipe de detetives, hospital especializado, oficina e mapa do tempo.
 
-### Módulo 4 — Soluções de Conformidade da Microsoft (25–30%)
+### Módulo 4 — Soluções de Conformidade da Microsoft (20–25%)
 
 **Sub-áreas**:
 - Service Trust Portal (STP) e Microsoft Privacy Statement

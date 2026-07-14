@@ -37,7 +37,7 @@ const DOMAINS = [
     id: 'd3',
     icon: '🛡️',
     name: 'Segurança Microsoft',
-    weight: '30–35%',
+    weight: '35–40%',
     topics: [
       { t: 'Microsoft Defender XDR', s: 'Defender for Endpoint, Identity, Office 365, Cloud Apps' },
       { t: 'Microsoft Sentinel', s: 'SIEM + SOAR nativo da nuvem' },
@@ -52,7 +52,7 @@ const DOMAINS = [
     id: 'd4',
     icon: '📋',
     name: 'Conformidade Microsoft',
-    weight: '25–30%',
+    weight: '20–25%',
     topics: [
       { t: 'Service Trust Portal (STP)', s: 'Documentos de auditoria, relatórios e whitepapers' },
       { t: 'Microsoft Purview Compliance Portal', s: 'Central única de gestão de conformidade' },

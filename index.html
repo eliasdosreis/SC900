@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="effects.css" />
 </head>
 <body>
   <!-- Decorative blueprint grid -->
@@ -48,7 +49,7 @@
     <div class="hero__inner">
       <span class="badge reveal">
         <span class="badge__pulse"></span>
-        <span class="badge__new">NOVO · Módulos 1 &amp; 2 disponíveis</span>
+        <span class="badge__new">NOVO · Módulo 3 disponível</span>
       </span>
       <h1 class="hero__title reveal">
         Security, Compliance<br />&amp; Identity Fundamentals
@@ -78,11 +79,11 @@
       </div>
 
       <div class="hero__actions reveal">
-        <a href="modulo-2.html" class="btn btn--primary">
-          👤 Estudar Módulo 2 — Microsoft Entra ID
+        <a href="modulo-3.html" class="btn btn--primary">
+          🛡️ Estudar Módulo 3 — Segurança
           <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a href="modulo-1.html" class="btn btn--ghost">📖 Módulo 1 — Conceitos de SCI</a>
+        <a href="modulo-2.html" class="btn btn--ghost">📖 Revisar Módulo 2 — Microsoft Entra ID</a>
       </div>
       <div class="hero__actions reveal" style="margin-top:14px;">
         <a href="#topics" class="btn btn--ghost btn--sm">Ver checklist de tópicos</a>
@@ -137,21 +138,21 @@
       <article class="domain-card reveal" style="--accent:#F25022">
         <div class="domain-card__top">
           <span class="domain-card__num">03</span>
-          <span class="domain-card__weight">30–35%</span>
+          <span class="domain-card__weight">35–40%</span>
         </div>
         <h3>Soluções de Segurança da Microsoft</h3>
         <p>Segurança no Azure, Microsoft Defender XDR, Defender for Cloud, proteção contra ameaças e gerenciamento de postura de segurança.</p>
-        <div class="domain-card__bar"><span style="width:32.5%"></span></div>
+        <div class="domain-card__bar"><span style="width:37.5%"></span></div>
       </article>
 
       <article class="domain-card reveal" style="--accent:#FFB900">
         <div class="domain-card__top">
           <span class="domain-card__num">04</span>
-          <span class="domain-card__weight">25–30%</span>
+          <span class="domain-card__weight">20–25%</span>
         </div>
         <h3>Soluções de Conformidade da Microsoft</h3>
         <p>Microsoft Purview: gestão de conformidade, prevenção de perda de dados, eDiscovery, Service Trust Portal e privacidade no Microsoft 365.</p>
-        <div class="domain-card__bar"><span style="width:27.5%"></span></div>
+        <div class="domain-card__bar"><span style="width:22.5%"></span></div>
       </article>
     </div>
   </section>
@@ -217,5 +218,6 @@
   <div class="toast" id="toast"></div>
 
   <script src="script.js"></script>
+  <script src="effects.js"></script>
 </body>
 </html>
