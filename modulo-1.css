@@ -157,6 +157,31 @@
 }
 .story strong { color: var(--c-kid); }
 
+/* Ilustrações didáticas — imagem + legenda interpretativa em HTML */
+.lesson-visual {
+  margin: 28px 0;
+  overflow: hidden;
+  background: rgba(9,15,27,.9);
+  border: 1px solid rgba(107,183,255,.24);
+  border-radius: 20px;
+  box-shadow: 0 22px 54px rgba(0,0,0,.26);
+}
+.lesson-visual img { display:block; width:100%; aspect-ratio:16/9; object-fit:cover; transition:transform 7s ease; }
+.lesson-visual:hover img { transform:scale(1.035); }
+.lesson-visual figcaption { display:flex; align-items:center; justify-content:center; gap:9px; flex-wrap:wrap; padding:15px 18px; background:linear-gradient(90deg,rgba(79,142,247,.06),rgba(255,184,107,.05)); }
+.lesson-visual figcaption > strong { width:100%; margin-bottom:2px; color:var(--text); text-align:center; font-size:.83rem; }
+.visual-key { padding:7px 10px; color:var(--text-dim); font-size:.75rem; font-weight:600; border:1px solid var(--border); border-radius:999px; }
+.visual-key--blue { background:rgba(79,142,247,.08); border-color:rgba(79,142,247,.28); }
+.visual-key--purple { background:rgba(155,109,255,.08); border-color:rgba(155,109,255,.28); }
+.visual-key--green { background:rgba(127,186,0,.08); border-color:rgba(127,186,0,.28); }
+.visual-key--orange { background:rgba(255,184,107,.08); border-color:rgba(255,184,107,.28); }
+@media (max-width:620px) {
+  .lesson-visual { border-radius:15px; }
+  .lesson-visual img { aspect-ratio:4/3; }
+  .lesson-visual figcaption { align-items:stretch; flex-direction:column; }
+  .visual-key { text-align:left; border-radius:10px; }
+}
+
 /* ---------- Tag Sênior ---------- */
 .tag {
   display: inline-block;

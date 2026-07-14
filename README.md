@@ -641,6 +641,15 @@ Também valide, para cada quiz:
 - 5 desafios de explicação pela técnica Feynman, com cronômetro.
 - XP, nível, precisão, sequência e conceitos dominados salvos em `sc900_module1_active_study_v1`.
 
+**Ilustrações didáticas**:
+
+- Tríade CIA: controle de acesso, detecção de alteração e resiliência ao redor do mesmo dado.
+- Zero Trust: verificações sucessivas de identidade, dispositivo e destino.
+- Defesa em profundidade: muralhas concêntricas até o dado central.
+- Responsabilidade compartilhada: comparação visual entre IaaS, PaaS e SaaS.
+
+As imagens ficam em `assets/modules/module-1/`, usam legendas interpretativas em HTML e carregamento lazy.
+
 **Regra pedagógica aplicada**: a atividade não substitui a conclusão das aulas nem o quiz; ela mede prática deliberada em um estado separado.
 
 ---
