@@ -306,6 +306,17 @@ let lessonState = loadModuleState();
 // 8. showToast() function
 ```
 
+#### Estudo ativo (recomendado para módulos densos)
+
+Além da leitura e do quiz, prefira pelo menos uma interação que obrigue o aluno a **recuperar, decidir ou explicar** o conteúdo. Boas opções:
+
+- Missões baseadas em cenários, com decisão e feedback explicativo.
+- Flashcards que mostram primeiro a pergunta e só depois a resposta.
+- Técnica Feynman/teach-back: explicar o conceito antes de ver os pontos essenciais.
+- Associação ou classificação de conceitos fáceis de confundir.
+
+Se houver gamificação, salve-a em uma chave separada do progresso das aulas, por exemplo `sc900_module{N}_active_study_v1`. XP nunca deve marcar uma aula como concluída automaticamente. O estado precisa tolerar `localStorage` vazio ou inválido, e cada controle deve funcionar por teclado, ter texto visível e feedback com `aria-live` quando necessário.
+
 ### Passo 4 — Criar `quiz-{N}.html` (Quiz em Inglês)
 
 Use `quiz-1.html` como template. Estrutura:
@@ -607,6 +618,21 @@ Também valide, para cada quiz:
 ---
 
 ## 🗺️ Roadmap dos Próximos Módulos
+
+### Módulo 1 — Conceitos de Segurança, Conformidade e Identidade (10–15%) ✅ CONCLUÍDO
+
+**Aulas criadas (7 aulas)**: tríade CIA, Zero Trust, defesa em profundidade, identidade, responsabilidade compartilhada, conformidade/GRC e privacidade/confiança.
+
+**Treino ativo**:
+
+- 7 missões por cenário com feedback imediato.
+- 10 flashcards de recuperação ativa.
+- 5 desafios de explicação pela técnica Feynman, com cronômetro.
+- XP, nível, precisão, sequência e conceitos dominados salvos em `sc900_module1_active_study_v1`.
+
+**Regra pedagógica aplicada**: a atividade não substitui a conclusão das aulas nem o quiz; ela mede prática deliberada em um estado separado.
+
+---
 
 ### Módulo 2 — Capacidades do Microsoft Entra ID (25–30%) ✅ CONCLUÍDO
 

@@ -40,6 +40,7 @@
       <a href="#aula-5">Nuvem</a>
       <a href="#aula-6">Conformidade</a>
       <a href="#aula-7">Privacidade</a>
+      <a href="#treino">Treino</a>
       <a href="#quiz">Quiz</a>
     </nav>
   </header>
@@ -690,6 +691,71 @@
     <button class="lesson__done reveal" data-complete="aula-7">
       <span class="lesson__done-check">✓</span> Marcar aula como concluída
     </button>
+  </section>
+
+  <!-- ============================================================
+       CENTRAL DE TREINO ATIVO
+       ============================================================ -->
+  <section class="study-lab" id="treino">
+    <div class="study-lab__hero reveal">
+      <div>
+        <span class="lesson__num">TREINO ATIVO</span>
+        <h2>🧠 Central de Missões SCI</h2>
+        <p>Troque leitura passiva por decisões, recuperação de memória e explicação. Cada atividade rende XP e mostra onde revisar.</p>
+      </div>
+      <div class="study-xp" aria-live="polite">
+        <span>NÍVEL <b id="studyLevel">1</b></span>
+        <strong><span id="studyXp">0</span> XP</strong>
+        <div class="study-xp__track"><i id="studyXpFill"></i></div>
+      </div>
+    </div>
+
+    <div class="study-lab__stats reveal">
+      <div><span>🎯</span><strong id="missionAccuracy">0%</strong><small>Precisão</small></div>
+      <div><span>🧩</span><strong id="masteredCount">0/10</strong><small>Dominados</small></div>
+      <div><span>🔥</span><strong id="studyStreak">0</strong><small>Sequência</small></div>
+    </div>
+
+    <div class="study-tabs reveal" role="tablist" aria-label="Modos de treino">
+      <button class="study-tab active" role="tab" aria-selected="true" aria-controls="panel-missions" data-study-tab="missions">🎯 Missões</button>
+      <button class="study-tab" role="tab" aria-selected="false" aria-controls="panel-flashcards" data-study-tab="flashcards">🃏 Flashcards</button>
+      <button class="study-tab" role="tab" aria-selected="false" aria-controls="panel-teachback" data-study-tab="teachback">🎙️ Explique</button>
+    </div>
+
+    <div class="study-panel active" id="panel-missions" role="tabpanel">
+      <div class="mission-head">
+        <div><span id="missionTopic">MISSÃO 1</span><h3 id="missionTitle">Carregando cenário...</h3></div>
+        <div class="mission-progress"><span id="missionPosition">1/7</span><i><b id="missionFill"></b></i></div>
+      </div>
+      <p class="mission-story" id="missionStory"></p>
+      <div class="mission-options" id="missionOptions"></div>
+      <div class="mission-feedback" id="missionFeedback" hidden></div>
+      <button class="btn btn--primary mission-next" id="missionNext" hidden>Próxima missão →</button>
+    </div>
+
+    <div class="study-panel" id="panel-flashcards" role="tabpanel" hidden>
+      <div class="flashcard-meta"><span id="flashcardPosition">1 de 10</span><span>Toque no card para virar</span></div>
+      <button class="flashcard" id="flashcard" aria-label="Virar flashcard">
+        <span class="flashcard__face flashcard__front"><small>CONCEITO</small><strong id="flashcardFront"></strong><em>Toque para revelar</em></span>
+        <span class="flashcard__face flashcard__back"><small>RESPOSTA</small><strong id="flashcardBack"></strong><em id="flashcardHook"></em></span>
+      </button>
+      <div class="flashcard-actions">
+        <button class="btn btn--ghost" id="flashReview">↺ Preciso revisar</button>
+        <button class="btn btn--primary" id="flashMastered">✓ Eu sabia</button>
+      </div>
+    </div>
+
+    <div class="study-panel" id="panel-teachback" role="tabpanel" hidden>
+      <div class="teachback-card">
+        <span class="teachback-card__badge">TÉCNICA FEYNMAN</span>
+        <h3 id="teachbackPrompt"></h3>
+        <p>Explique em voz alta como se estivesse ensinando alguém sem experiência. Use suas próprias palavras antes de abrir o guia.</p>
+        <div class="teachback-timer"><span id="teachbackTimer">01:00</span><button id="teachbackStart">▶ Iniciar 1 minuto</button></div>
+        <button class="btn btn--ghost" id="teachbackReveal">Ver pontos essenciais</button>
+        <div class="teachback-answer" id="teachbackAnswer" hidden></div>
+        <button class="btn btn--primary" id="teachbackNext">Novo desafio →</button>
+      </div>
+    </div>
   </section>
 
   <!-- ============================================================
