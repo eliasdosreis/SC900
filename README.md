@@ -105,6 +105,19 @@ A página `ab-900.html` inicia uma área independente para **Microsoft 365 Copil
 
 Arquivos da seção: `ab-900.html`, `ab-900.css` e `ab-900.js`. O `index.html` mantém a SC-900 como trilha principal e oferece um card para acessar a AB-900.
 
+#### AB-900 · Módulo 01 — Microsoft 365: objetos, serviços e segurança ✅
+
+- Peso oficial: **30–35%**
+- Arquivos: `ab-modulo-1.html/.css/.js` e `ab-quiz-1.html/.css/.js`
+- 6 aulas, 6 cenários de estudo ativo, quiz PT com 6 questões
+- English Exam Mode com 10 questões originais e 16 termos
+- Progresso: `ab900_module1_progress_v1`
+- Estudo ativo: `ab900_module1_active_study_v1`
+
+**Aulas**: tenant/licenças/admin center; Exchange; SharePoint e Teams; Zero Trust e Defender XDR; Entra ID, diagnóstico e PIM; app registrations e Enterprise applications.
+
+**Analogias novas**: cidade universitária, central postal, estúdio de produção, aeroporto internacional, sala de emergência e projeto/robô instalado.
+
 ---
 
 ## 🧠 A Metodologia "Criança → Sênior"

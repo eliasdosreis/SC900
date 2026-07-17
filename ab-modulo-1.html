@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Módulo 01 · Microsoft 365 e Segurança — AB-900</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="ab-modulo-1.css" />
+  <link rel="stylesheet" href="effects.css" />
+</head>
+<body>
+  <div class="grid-overlay" aria-hidden="true"></div><div class="glow glow--1" aria-hidden="true"></div><div class="glow glow--2" aria-hidden="true"></div>
+  <header class="nav">
+    <a class="nav__brand" href="ab-900.html"><span class="ab-mark">AB</span><span class="nav__title"><strong>AB-900</strong><span>Módulo 01</span></span></a>
+    <nav class="nav__links" aria-label="Aulas"><a href="#aula-1">Base</a><a href="#aula-2">Exchange</a><a href="#aula-3">Colaboração</a><a href="#aula-4">Segurança</a><a href="#aula-5">Entra</a><a href="#aula-6">Apps</a><a href="#quiz">Quiz</a></nav>
+  </header>
+
+  <main>
+    <section class="m-hero">
+      <div class="m-hero__content reveal">
+        <span class="m-hero__eyebrow">DOMÍNIO 01 · 30–35% DA PROVA</span>
+        <h1>Microsoft 365:<br /><span>objetos, serviços e segurança</span></h1>
+        <p>Aprenda a escolher o objeto certo, encontrar o centro de administração correto e proteger o acesso sem decorar telas.</p>
+        <div class="hero-map" aria-label="Fluxo mental do módulo"><span>👥 Objetos</span><b>→</b><span>🏢 Serviços</span><b>→</b><span>🛡️ Segurança</span><b>→</b><span>🔎 Operação</span></div>
+      </div>
+      <div class="m-hero__path" aria-label="Trilha das aulas">
+        <a class="path-dot" data-lesson="aula-1" href="#aula-1">1</a><a class="path-dot" data-lesson="aula-2" href="#aula-2">2</a><a class="path-dot" data-lesson="aula-3" href="#aula-3">3</a><a class="path-dot" data-lesson="aula-4" href="#aula-4">4</a><a class="path-dot" data-lesson="aula-5" href="#aula-5">5</a><a class="path-dot" data-lesson="aula-6" href="#aula-6">6</a>
+      </div>
+    </section>
+
+    <div class="m-progress-wrap"><div class="progress-card reveal"><div class="progress-card__head"><h2>🧭 Progresso do módulo</h2><strong class="progress-card__value" id="moduleProgress">0%</strong></div><div class="progress-card__bar"><div class="progress-card__fill" id="moduleFill"></div></div><p id="moduleHint">Conclua as seis aulas para dominar o primeiro domínio.</p></div></div>
+
+    <section class="lesson" id="aula-1">
+      <div class="lesson__head reveal"><span class="lesson__num">Aula 01</span><h2>🏫 Tenant, licenças e centro de administração</h2><p class="lesson__intro">Comece pela organização: quem existe, qual licença recebe e onde as configurações globais são gerenciadas.</p></div>
+      <div class="lesson__body">
+        <div class="story reveal"><div class="story__icon">🎓</div><h3>A cidade universitária</h3><p>O <strong>tenant</strong> é o campus. Usuários e grupos são alunos e turmas. A <strong>licença</strong> é a matrícula que libera laboratórios específicos. O Microsoft 365 admin center é a reitoria: cadastra pessoas, domínios, licenças e regras da instituição.</p></div>
+        <div class="concept-grid reveal"><article><span>🏢</span><h3>Tenant</h3><p>Instância da organização com domínios, configurações, usuários, grupos e assinaturas.</p></article><article><span>🎫</span><h3>Licença</h3><p>Determina quais serviços e recursos um usuário ou grupo pode utilizar.</p></article><article><span>🧭</span><h3>Microsoft 365 admin center</h3><p>Visão geral de usuários, cobrança, saúde, domínios e configurações organizacionais.</p></article></div>
+        <p class="pillar__senior reveal"><span class="tag tag--senior">⚡ SÊNIOR</span> Atribuir uma licença não substitui permissões internas do serviço. Licença habilita a capacidade; funções, políticas e permissões controlam o que a identidade pode fazer.</p>
+        <div class="callout callout--key reveal"><strong>🔑 Regra de prova:</strong> domínio e configuração da organização → Microsoft 365 admin center. Configuração específica de workload → admin center daquele workload.</div>
+      </div><button class="lesson__done reveal" data-complete="aula-1"><span class="lesson__done-check">✓</span> Marcar aula como concluída</button>
+    </section>
+
+    <section class="lesson" id="aula-2">
+      <div class="lesson__head reveal"><span class="lesson__num">Aula 02</span><h2>📮 Exchange: caixas de correio e grupos</h2><p class="lesson__intro">Associe cada objeto de email ao problema que ele resolve.</p></div>
+      <div class="lesson__body">
+        <div class="story reveal"><div class="story__icon">📬</div><h3>A central postal</h3><p>Uma <strong>mailbox</strong> é uma caixa que guarda cartas. Uma <strong>shared mailbox</strong> é a caixa “suporte@” usada por uma equipe. Um <strong>distribution group</strong> é o carteiro que copia a mesma carta para uma lista — ele distribui, não guarda.</p></div>
+        <div class="compare-table reveal"><table><thead><tr><th>Objeto</th><th>Use quando...</th><th>Ponto-chave</th></tr></thead><tbody><tr><td>User mailbox</td><td>Uma pessoa precisa enviar e receber email</td><td>Associada ao usuário</td></tr><tr><td>Shared mailbox</td><td>Uma equipe atende um endereço comum</td><td>Membros acessam a mesma caixa</td></tr><tr><td>Distribution group</td><td>Uma mensagem deve chegar a vários membros</td><td>Distribui; não é caixa colaborativa</td></tr></tbody></table></div>
+        <p class="pillar__senior reveal"><span class="tag tag--senior">⚡ SÊNIOR</span> O Exchange admin center é a ferramenta adequada para objetos e políticas de email. Grupos de distribuição tratam fluxo de mensagens; Microsoft 365 groups também sustentam colaboração entre workloads.</p>
+        <div class="callout callout--warning reveal"><strong>⚠️ Não confunda:</strong> shared mailbox permite trabalhar dentro da mesma caixa; distribution group apenas entrega cópias aos destinatários.</div>
+      </div><button class="lesson__done reveal" data-complete="aula-2"><span class="lesson__done-check">✓</span> Marcar aula como concluída</button>
+    </section>
+
+    <section class="lesson" id="aula-3">
+      <div class="lesson__head reveal"><span class="lesson__num">Aula 03</span><h2>🎬 SharePoint e Teams: o estúdio de colaboração</h2><p class="lesson__intro">Entenda onde o conteúdo vive e como equipes, canais, sites e bibliotecas se relacionam.</p></div>
+      <div class="lesson__body">
+        <div class="story reveal"><div class="story__icon">🎥</div><h3>O estúdio de produção</h3><p>O <strong>Team</strong> é a produção de um filme; os <strong>channels</strong> são departamentos como roteiro e efeitos. O <strong>SharePoint site</strong> é o arquivo do estúdio, a <strong>library</strong> é uma estante e as <strong>folders</strong> organizam cada projeto.</p></div>
+        <div class="object-map reveal"><article><b>Teams</b><span>Team → Channel → Conversas e colaboração</span></article><article><b>SharePoint</b><span>Site → Library → Folder → File</span></article><article><b>Permissões</b><span>Owners administram · Members editam · Visitors leem</span></article></div>
+        <p class="pillar__senior reveal"><span class="tag tag--senior">⚡ SÊNIOR</span> Teams usa serviços do Microsoft 365 nos bastidores. Arquivos de canais normalmente são armazenados no SharePoint. Use Teams admin center para equipes/canais/políticas e SharePoint admin center para sites, acesso e governança de conteúdo.</p>
+        <div class="callout callout--tip reveal"><strong>💡 Macete:</strong> conversa e política de equipe → Teams; estrutura, conteúdo e permissão de site → SharePoint.</div>
+      </div><button class="lesson__done reveal" data-complete="aula-3"><span class="lesson__done-check">✓</span> Marcar aula como concluída</button>
+    </section>
+
+    <section class="lesson" id="aula-4">
+      <div class="lesson__head reveal"><span class="lesson__num">Aula 04</span><h2>🛫 Segurança Microsoft 365 e Defender XDR</h2><p class="lesson__intro">Pense em segurança como decisões contínuas, sinais correlacionados e resposta coordenada.</p></div>
+      <div class="lesson__body">
+        <div class="story reveal"><div class="story__icon">🛂</div><h3>O aeroporto internacional</h3><p>O passaporte prova <strong>quem você é</strong> (autenticação). O cartão de embarque mostra <strong>onde pode ir</strong> (autorização). Zero Trust confere os dois em pontos críticos. A central de segurança junta câmera, bagagem e portões para enxergar um único incidente — como o <strong>Defender XDR</strong>.</p></div>
+        <div class="security-chain reveal"><span>Verificar explicitamente</span><b>+</b><span>Menor privilégio</span><b>+</b><span>Assumir violação</span><b>→</b><span>Detectar e responder</span></div>
+        <div class="concept-grid reveal"><article><span>🪪</span><h3>Authentication</h3><p>Confirma a identidade.</p></article><article><span>🎟️</span><h3>Authorization</h3><p>Determina ações e recursos permitidos.</p></article><article><span>🧩</span><h3>Defender XDR</h3><p>Correlaciona sinais, alertas e incidentes entre domínios de segurança.</p></article></div>
+        <p class="pillar__senior reveal"><span class="tag tag--senior">⚡ SÊNIOR</span> Threat intelligence adiciona contexto sobre atores, indicadores e infraestrutura. Threat protection aplica prevenção, detecção, investigação e resposta. Defender XDR reúne sinais para reduzir alertas isolados.</p>
+        <div class="callout callout--key reveal"><strong>🔑 Ordem mental:</strong> autenticar → autorizar → monitorar sinais → correlacionar incidente → responder.</div>
+      </div><button class="lesson__done reveal" data-complete="aula-4"><span class="lesson__done-check">✓</span> Marcar aula como concluída</button>
+    </section>
+
+    <section class="lesson" id="aula-5">
+      <div class="lesson__head reveal"><span class="lesson__num">Aula 05</span><h2>🚑 Entra ID: acesso, diagnóstico e privilégio</h2><p class="lesson__intro">Use sinais para decidir acesso, logs para explicar falhas e PIM para limitar poder administrativo.</p></div>
+      <div class="lesson__body">
+        <div class="story reveal"><div class="story__icon">🏥</div><h3>A sala de emergência</h3><p>A recepção identifica o paciente (Entra ID), a triagem avalia sinais (Conditional Access), a pulseira permite circular sem novo cadastro (SSO), o prontuário registra tudo (logs) e a chave da sala restrita é emprestada ao médico apenas durante a emergência (PIM).</p></div>
+        <div class="decision-flow reveal"><span>Usuário + dispositivo + local + risco</span><b>→</b><span>Conditional Access</span><b>→</b><span>Permitir · exigir MFA · bloquear</span></div>
+        <div class="concept-grid reveal"><article><span>🔎</span><h3>Sign-in logs</h3><p>Mostram resultado, políticas aplicadas, localização, dispositivo e detalhes da entrada.</p></article><article><span>📈</span><h3>Identity Secure Score</h3><p>Recomenda melhorias na postura de identidade; não é certificação.</p></article><article><span>⏱️</span><h3>PIM</h3><p>Ativação elegível e just-in-time de funções privilegiadas.</p></article></div>
+        <p class="pillar__senior reveal"><span class="tag tag--senior">⚡ SÊNIOR</span> Para uma falha de entrada, revise sign-in logs, resultado de MFA, políticas de Acesso Condicional e detecções de risco. Audit logs respondem quem alterou o quê; sign-in logs explicam autenticações.</p>
+        <div class="callout callout--warning reveal"><strong>⚠️ Pegadinha:</strong> SSO reduz novas solicitações de credencial entre recursos confiáveis; não significa ausência de autenticação nem acesso irrestrito.</div>
+      </div><button class="lesson__done reveal" data-complete="aula-5"><span class="lesson__done-check">✓</span> Marcar aula como concluída</button>
+    </section>
+
+    <section class="lesson" id="aula-6">
+      <div class="lesson__head reveal"><span class="lesson__num">Aula 06</span><h2>🤖 App registrations e Enterprise applications</h2><p class="lesson__intro">Separe a definição global de um aplicativo da instância usada dentro do tenant.</p></div>
+      <div class="lesson__body">
+        <div class="story reveal"><div class="story__icon">🏭</div><h3>O projeto e o robô instalado</h3><p>A <strong>app registration</strong> é o projeto de fábrica do robô: identidade, credenciais e permissões solicitadas. A <strong>enterprise application</strong> é o robô já instalado na sua empresa: recebe usuários, grupos, consentimento e políticas locais.</p></div>
+        <div class="split-cards reveal"><article><span>📐</span><h3>App registration</h3><p>Application object: definição do aplicativo, IDs, redirect URIs, credenciais e permissões de API.</p></article><article><span>🤖</span><h3>Enterprise application</h3><p>Service principal: representação local no tenant, atribuições, SSO, consentimento e Acesso Condicional.</p></article></div>
+        <p class="pillar__senior reveal"><span class="tag tag--senior">⚡ SÊNIOR</span> Usuários e grupos são objetos de segurança usados para atribuir acesso. Aplicativos também precisam de identidade. O service principal permite que o tenant controle como aquela aplicação opera localmente.</p>
+        <div class="callout callout--tip reveal"><strong>💡 Macete:</strong> registration = projeto/definição; enterprise app = instância em uso no tenant.</div>
+      </div><button class="lesson__done reveal" data-complete="aula-6"><span class="lesson__done-check">✓</span> Marcar aula como concluída</button>
+    </section>
+
+    <section class="lesson active-study" id="treino">
+      <div class="lesson__head reveal"><span class="lesson__num">TREINO ATIVO</span><h2>🎯 Central de decisões administrativas</h2><p class="lesson__intro">Escolha a ferramenta certa para cada cenário. Decidir fixa mais do que reler.</p></div>
+      <div class="mission reveal" id="missionCard"><span id="missionCount">Cenário 1/6</span><h3 id="missionQuestion"></h3><div class="mission__options" id="missionOptions"></div><div class="mission__feedback" id="missionFeedback" aria-live="polite"></div><button class="btn btn--primary" id="missionNext" hidden>Próximo cenário →</button></div>
+    </section>
+
+    <section class="lesson" id="quiz">
+      <div class="lesson__head reveal"><span class="lesson__num">REVISÃO</span><h2>🧠 Teste o que aprendeu</h2></div>
+      <a href="ab-quiz-1.html" class="en-quiz-banner reveal"><span>🇬🇧</span><div><strong>English Exam Mode</strong><small>10 questões originais, vocabulário e explicações bilíngues</small></div><b>Começar →</b></a>
+      <div class="quiz reveal" id="quizContainer"></div><div class="quiz-result" id="quizResult" hidden><strong id="quizScore">0/6</strong><p id="quizMsg"></p><button class="btn btn--primary" id="quizRetry">Tentar novamente</button></div>
+    </section>
+  </main>
+  <footer class="footer"><a href="ab-900.html" class="btn btn--ghost">← Voltar ao Blueprint AB-900</a><p class="footer__note">Questões originais · Não são exam dumps.</p></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="ab-modulo-1.js"></script><script src="effects.js"></script>
+</body>
+</html>

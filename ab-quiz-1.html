@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>AB-900 Module 1 · English Exam Mode</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" /><link rel="stylesheet" href="ab-quiz-1.css" /><link rel="stylesheet" href="effects.css" />
+</head>
+<body>
+  <div class="grid-overlay" aria-hidden="true"></div><div class="glow glow--1" aria-hidden="true"></div><div class="glow glow--2" aria-hidden="true"></div>
+  <header class="nav"><a class="nav__brand" href="ab-900.html"><span class="ab-qmark">AB</span><span class="nav__title"><strong>AB-900</strong><span>English Exam Mode</span></span></a><nav class="nav__links"><a href="ab-modulo-1.html">← Lessons</a><a href="#vocabulary">Vocabulary</a><a href="#quiz">Quiz</a></nav><div class="nav__chip"><span class="nav__chip-dot"></span><span id="quizChipText">Ready · 0/10</span></div></header>
+  <main>
+    <section class="quiz-hero reveal"><span class="badge">🇬🇧 ENGLISH EXAM MODE</span><h1>Microsoft 365 Core<br />Objects &amp; Security</h1><p>Original practice questions aligned with AB-900 Domain 1.</p><div class="quiz-meta"><span><b>10</b> questions</span><span><b>~10</b> min</span><span><b>70%</b> to pass</span><span><b>EN + PT</b> help</span></div></section>
+    <section class="vocab-section" id="vocabulary"><div class="section-head reveal"><span class="lesson__num">Vocabulary warm-up</span><h2>16 terms to know</h2></div><div class="vocab-grid stagger-children">
+      <article class="vocab-card"><strong>Tenant</strong><span>Locatário / instância</span><small>An organization's dedicated cloud environment.</small></article>
+      <article class="vocab-card"><strong>License assignment</strong><span>Atribuição de licença</span><small>Enables services and features for an identity.</small></article>
+      <article class="vocab-card"><strong>Mailbox</strong><span>Caixa de correio</span><small>Stores and manages email messages.</small></article>
+      <article class="vocab-card"><strong>Distribution group</strong><span>Grupo de distribuição</span><small>Delivers a message to multiple recipients.</small></article>
+      <article class="vocab-card"><strong>Site</strong><span>Site</span><small>A SharePoint collaboration and content container.</small></article>
+      <article class="vocab-card"><strong>Library</strong><span>Biblioteca</span><small>A location that stores and manages files.</small></article>
+      <article class="vocab-card"><strong>Channel</strong><span>Canal</span><small>A focused collaboration area inside a team.</small></article>
+      <article class="vocab-card"><strong>Authentication</strong><span>Autenticação</span><small>Proving who an identity is.</small></article>
+      <article class="vocab-card"><strong>Authorization</strong><span>Autorização</span><small>Determining what an identity may do.</small></article>
+      <article class="vocab-card"><strong>Single sign-on</strong><span>Logon único</span><small>Accessing trusted resources without repeated prompts.</small></article>
+      <article class="vocab-card"><strong>Conditional Access</strong><span>Acesso Condicional</span><small>Access decisions based on signals and controls.</small></article>
+      <article class="vocab-card"><strong>Sign-in log</strong><span>Log de entrada</span><small>A record of authentication attempts.</small></article>
+      <article class="vocab-card"><strong>Audit log</strong><span>Log de auditoria</span><small>A record of changes and administrative activity.</small></article>
+      <article class="vocab-card"><strong>Eligible role</strong><span>Função elegível</span><small>A role that can be activated when needed.</small></article>
+      <article class="vocab-card"><strong>App registration</strong><span>Registro de aplicativo</span><small>The global definition of an application identity.</small></article>
+      <article class="vocab-card"><strong>Service principal</strong><span>Entidade de serviço</span><small>The application's local representation in a tenant.</small></article>
+    </div></section>
+    <section class="quiz-section" id="quiz"><div class="section-head reveal"><span class="lesson__num">The Quiz</span><h2>10 original scenario questions</h2></div><div class="quiz-toolbar"><div class="quiz-dots" id="quizDots"></div><strong>Score: <span id="liveScore">0</span>/10</strong></div><div id="quizContainer"></div>
+      <div class="quiz-result" id="quizResult" hidden><div class="quiz-result__icon" id="resultIcon">🎯</div><strong class="quiz-result__score" id="quizScore">0/10</strong><div class="quiz-result__grade" id="quizGrade"></div><p id="quizMsg"></p><div class="result-actions"><button class="btn btn--primary" id="quizRetry">Try Again</button><a class="btn btn--ghost" href="#vocabulary">Review Vocabulary</a><a class="btn btn--ghost" href="ab-modulo-1.html">Review Lessons</a></div></div>
+    </section>
+  </main>
+  <footer class="footer"><a href="ab-900.html" class="btn btn--ghost">← AB-900 Blueprint</a><p class="footer__note">Original practice questions · Not exam dumps.</p></footer><div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="ab-quiz-1.js"></script><script src="effects.js"></script>
+</body></html>

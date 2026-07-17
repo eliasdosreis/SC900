@@ -1,0 +1,5 @@
+@import url("quiz-2.css");
+:root{--quiz-accent:#55d6be}.ab-qmark{display:grid;place-items:center;width:35px;height:35px;border-radius:10px;background:linear-gradient(135deg,#8b5cf6,var(--quiz-accent));color:#fff;font:700 .7rem var(--mono)}
+.quiz-hero{position:relative;z-index:1;padding:145px 24px 75px;text-align:center}.quiz-hero h1{margin:18px 0 10px;font:700 clamp(2.4rem,6vw,4.6rem)/1 Fredoka,var(--font)}.quiz-hero p{color:var(--text-dim)}.quiz-meta{display:flex;justify-content:center;flex-wrap:wrap;gap:28px;margin-top:25px}.quiz-meta span{color:var(--text-dim)}.quiz-meta b{color:var(--quiz-accent)}
+.vocab-card strong,.vocab-card span,.vocab-card small{display:block}.vocab-card strong{color:var(--text);font-size:.92rem}.vocab-card span{margin:6px 0;color:var(--quiz-accent);font-size:.8rem}.vocab-card small{color:var(--text-faint);font-style:italic;line-height:1.4}
+.lesson__num,.quiz-q__topic{color:var(--quiz-accent)}.quiz-toolbar{border-color:rgba(85,214,190,.3)}.quiz-opt.correct{border-color:var(--quiz-accent)!important;background:rgba(85,214,190,.12)!important}.quiz-result__grade.pass{color:var(--quiz-accent)}
