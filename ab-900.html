@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AB-900 Blueprint · Microsoft 365 Copilot e Agentes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="ab-900.css" />
+  <link rel="stylesheet" href="effects.css" />
+</head>
+<body>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="glow glow--1" aria-hidden="true"></div>
+  <div class="glow glow--2" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="nav__brand" href="index.html" aria-label="Voltar à página inicial">
+      <span class="ab-logo">AB</span>
+      <span class="nav__title"><strong>AB-900</strong><span>Copilot &amp; Agent Administration</span></span>
+    </a>
+    <nav class="nav__links" aria-label="Navegação da trilha AB-900">
+      <a href="#domains">Domínios</a>
+      <a href="#checklist">Checklist</a>
+      <a href="#strategy">Estratégia</a>
+      <a href="index.html">SC-900</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="ab-hero">
+      <div class="ab-hero__copy reveal">
+        <span class="badge"><span class="badge__dot"></span>NOVA TRILHA · BLUEPRINT 22/07/2026</span>
+        <p class="ab-hero__eyebrow">Microsoft 365 Copilot and Agent Administration Fundamentals</p>
+        <h1>Prepare o ambiente.<br /><span>Proteja os dados.</span><br />Administre a IA.</h1>
+        <p class="ab-hero__lead">Uma trilha visual para aprender Microsoft 365, governança do Copilot e administração de agentes — do conceito simples à decisão de prova.</p>
+        <div class="ab-hero__actions">
+          <a class="btn btn--primary" href="#checklist">Começar diagnóstico</a>
+          <a class="btn btn--ghost" href="https://learn.microsoft.com/pt-br/credentials/certifications/resources/study-guides/ab-900" target="_blank" rel="noopener">Guia oficial ↗</a>
+        </div>
+      </div>
+      <div class="ab-console reveal-scale" aria-label="Mapa visual da administração de IA">
+        <div class="ab-console__core">✨<strong>Copilot</strong><small>e agentes</small></div>
+        <div class="ab-orbit ab-orbit--one"><span>👥</span><b>Microsoft 365</b></div>
+        <div class="ab-orbit ab-orbit--two"><span>🛡️</span><b>Proteção de dados</b></div>
+        <div class="ab-orbit ab-orbit--three"><span>🤖</span><b>Administração</b></div>
+      </div>
+    </section>
+
+    <section class="ab-date-note reveal">
+      <span>📅</span>
+      <p><strong>Blueprint adotado:</strong> habilidades medidas a partir de 22 de julho de 2026. A versão inglesa da certificação está anunciada para atualização nessa data.</p>
+    </section>
+
+    <section class="section" id="domains">
+      <div class="section__head reveal">
+        <span class="section__eyebrow">Mapa oficial</span>
+        <h2 class="section__title">Os 3 domínios da AB-900</h2>
+        <p class="section__desc">A maior área é proteção e governança de dados. Ela merece mais tempo de estudo.</p>
+      </div>
+      <div class="ab-domains">
+        <article class="ab-domain reveal" style="--domain:#55d6be">
+          <div class="ab-domain__top"><span>01 · FUNDAÇÃO</span><strong>30–35%</strong></div>
+          <div class="ab-domain__icon">🏙️</div>
+          <h3>Serviços e objetos do Microsoft 365</h3>
+          <p>Licenças, usuários, grupos, Exchange, SharePoint, Teams, Entra ID, Zero Trust, autenticação, SSO, PIM e Defender XDR.</p>
+          <div class="ab-domain__route"><span>Objetos</span><i>→</i><span>Segurança</span><i>→</i><span>Admin centers</span></div>
+        </article>
+        <article class="ab-domain reveal" style="--domain:#a78bfa">
+          <div class="ab-domain__top"><span>02 · MAIOR PESO</span><strong>35–40%</strong></div>
+          <div class="ab-domain__icon">🧬</div>
+          <h3>Proteção e governança de dados</h3>
+          <p>Purview, DLP, classificação, retenção, DSPM for AI, permissões do Copilot, Microsoft Graph, IA responsável e oversharing.</p>
+          <div class="ab-domain__route"><span>Descobrir</span><i>→</i><span>Proteger</span><i>→</i><span>Governar</span></div>
+        </article>
+        <article class="ab-domain reveal" style="--domain:#ffb86b">
+          <div class="ab-domain__top"><span>03 · OPERAÇÃO</span><strong>25–30%</strong></div>
+          <div class="ab-domain__icon">🤖</div>
+          <h3>Administração de Copilot e agentes</h3>
+          <p>Licenciamento, pay-as-you-go, adoção, prompts, Researcher, Analyst, criação, aprovação, acesso e ciclo de vida de agentes.</p>
+          <div class="ab-domain__route"><span>Habilitar</span><i>→</i><span>Monitorar</span><i>→</i><span>Controlar</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="checklist">
+      <div class="section__head reveal">
+        <span class="section__eyebrow">Diagnóstico interativo</span>
+        <h2 class="section__title">O que você já domina?</h2>
+        <p class="section__desc">Marque os objetivos conhecidos. O progresso da AB-900 fica separado da SC-900.</p>
+      </div>
+      <div class="ab-progress reveal">
+        <div><strong id="abProgress">0%</strong><span id="abProgressText">0 de 0 objetivos dominados</span></div>
+        <div class="ab-progress__track"><span id="abProgressFill"></span></div>
+        <button class="btn btn--ghost btn--sm" id="abReset">Resetar</button>
+      </div>
+      <div class="ab-checklist" id="abChecklist"></div>
+    </section>
+
+    <section class="section" id="strategy">
+      <div class="section__head reveal">
+        <span class="section__eyebrow">Plano de ataque</span>
+        <h2 class="section__title">Estratégia de estudo</h2>
+      </div>
+      <div class="ab-strategy">
+        <article class="reveal"><span>1</span><h3>Entenda o ecossistema</h3><p>Associe cada objeto ao seu centro de administração e à tarefa que ele resolve.</p></article>
+        <article class="reveal"><span>2</span><h3>Siga o caminho do dado</h3><p>Descubra o que o usuário pode acessar, como o Graph fundamenta respostas e onde o Purview aplica controle.</p></article>
+        <article class="reveal"><span>3</span><h3>Pense como administrador</h3><p>Treine cenários de licença, acesso, aprovação, monitoramento e ciclo de vida de agentes.</p></article>
+        <article class="reveal"><span>4</span><h3>Pratique em inglês</h3><p>Memorize os pares que confundem: agent vs Copilot, license vs PAYG, label vs DLP e access vs oversharing.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="index.html" class="btn btn--ghost">← Voltar para SC-900</a>
+    <p class="footer__note">Trilha independente de estudos · AB-900 · Não afiliada oficialmente à Microsoft.</p>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="ab-900.js"></script>
+  <script src="effects.js"></script>
+</body>
+</html>

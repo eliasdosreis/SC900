@@ -24,7 +24,7 @@
 
 ## 🎯 Visão Geral do Projeto
 
-Este projeto é uma página web estática (HTML + CSS + JavaScript puro, **sem dependências, sem build**) que ajuda uma pessoa a estudar para a prova **SC-900** da Microsoft.
+Este projeto é uma página web estática (HTML + CSS + JavaScript puro, **sem dependências, sem build**) para estudar certificações Fundamentals da Microsoft. A trilha original cobre a **SC-900** e a nova seção cobre a **AB-900**.
 
 ### Características principais
 
@@ -92,6 +92,18 @@ SC900/
 | **2** | Capacidades do Microsoft Entra ID | 25–30% | 6 ✅ | 10 questões ✅ | **CONCLUÍDO** |
 | **3** | Soluções de Segurança da Microsoft | 35–40% | 6 ✅ | 10 questões ✅ | **CONCLUÍDO** |
 | **4** | Soluções de Conformidade da Microsoft | 20–25% | 6 ✅ | 10 questões ✅ | **CONCLUÍDO** |
+
+### Trilha AB-900
+
+A página `ab-900.html` inicia uma área independente para **Microsoft 365 Copilot and Agent Administration Fundamentals**, com progresso salvo na chave `ab900_blueprint_progress_v1`.
+
+| Domínio oficial (blueprint de 22/07/2026) | Peso |
+|---|---:|
+| Recursos e objetos principais dos serviços Microsoft 365 | 30–35% |
+| Proteção e governança de dados para Microsoft 365 e Copilot | 35–40% |
+| Administração básica de Copilot e agentes | 25–30% |
+
+Arquivos da seção: `ab-900.html`, `ab-900.css` e `ab-900.js`. O `index.html` mantém a SC-900 como trilha principal e oferece um card para acessar a AB-900.
 
 ---
 
@@ -865,6 +877,8 @@ O array `DOMAINS[]` no `script.js` contém todos os tópicos da prova. Ao conclu
 - [Inside Cloud and Security — SC-900 Practice Quiz](https://insidethemicrosoftcloud.com/sc900quiz/)
 - [Reddit — "Passed SC-900" experiências](https://www.reddit.com/r/AzureCertification/)
 - [Microsoft Learn — Trilha oficial SC-900](https://learn.microsoft.com/pt-br/credentials/certifications/security-compliance-and-identity-fundamentals/)
+- [Microsoft Learn — AB-900 Study Guide (oficial)](https://learn.microsoft.com/pt-br/credentials/certifications/resources/study-guides/ab-900)
+- [Microsoft Learn — Certificação AB-900](https://learn.microsoft.com/en-us/credentials/certifications/copilot-and-agent-administration-fundamentals/)
 
 ---
 
