@@ -55,12 +55,12 @@ const DOMAINS = [
     weight: '20–25%',
     topics: [
       { t: 'Service Trust Portal (STP)', s: 'Documentos de auditoria, relatórios e whitepapers' },
-      { t: 'Microsoft Purview Compliance Portal', s: 'Central única de gestão de conformidade' },
+      { t: 'Microsoft Purview portal', s: 'Central de proteção, governança, risco e conformidade' },
       { t: 'Compliance Manager', s: 'Pontuação e ações de melhoria por regulamento' },
-      { t: 'Prevenção de Perda de Dados (DLP)', s: 'Proteção de dados sensíveis em trânsito e em repouso' },
-      { t: 'Sensibilidade & Rótulos', s: 'Sensitivity labels e Information Protection' },
-      { t: 'eDiscovery', s: 'Identificação e exportação de conteúdo relevante' },
-      { t: 'Auditoria & Retenção', s: 'Políticas de retenção e logs de auditoria unificada' },
+      { t: 'Classificação & Explorers', s: 'Tipos de informação, Content explorer e Activity explorer' },
+      { t: 'Sensitivity Labels & DLP', s: 'Classificação persistente e prevenção contra perda de dados' },
+      { t: 'Retenção & Records Management', s: 'Ciclo de vida, rótulos, políticas e registros' },
+      { t: 'Insider Risk, eDiscovery & Audit', s: 'Risco interno, investigação, preservação e trilha de auditoria' },
     ],
   },
 ];

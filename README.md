@@ -75,6 +75,12 @@ SC900/
 ├── quiz-2.css              # Estilos específicos do quiz
 ├── quiz-2.js               # 10 questões + vocabulário + feedback
 │
+├── modulo-3.html/.css/.js  # Módulo 3 — Segurança Microsoft + quiz PT
+├── quiz-3.html/.css/.js    # Quiz do Módulo 3 (EN — English Mode)
+│
+├── modulo-4.html/.css/.js  # Módulo 4 — Conformidade Microsoft + quiz PT
+├── quiz-4.html/.css/.js    # Quiz do Módulo 4 (EN — English Mode)
+│
 └── README.md               # Este playbook 👈
 ```
 
@@ -85,7 +91,7 @@ SC900/
 | **1** | Conceitos de Segurança, Conformidade e Identidade | 10–15% | 7 ✅ | 10 questões ✅ | **CONCLUÍDO** |
 | **2** | Capacidades do Microsoft Entra ID | 25–30% | 6 ✅ | 10 questões ✅ | **CONCLUÍDO** |
 | **3** | Soluções de Segurança da Microsoft | 35–40% | 6 ✅ | 10 questões ✅ | **CONCLUÍDO** |
-| **4** | Soluções de Conformidade da Microsoft | 20–25% | — | — | Pendente |
+| **4** | Soluções de Conformidade da Microsoft | 20–25% | 6 ✅ | 10 questões ✅ | **CONCLUÍDO** |
 
 ---
 
@@ -147,6 +153,12 @@ Para evitar analogias repetidas entre módulos, aqui está o registro:
 | Microsoft Defender XDR | 🧩 Equipe de detetives compartilhando o mural do caso | 3 |
 | Família Defender | 🦸 Hospital com alas especializadas e prontuário unificado | 3 |
 | Vulnerabilidades e Threat Intelligence | 🔬 Oficina preventiva e mapa do tempo das ameaças | 3 |
+| STP e privacidade | 🍽️ Restaurante com cozinha de vidro e pasta de inspeções | 4 |
+| Compliance Manager | ✈️ Painel de manutenção do avião | 4 |
+| Classificação e explorers | 📚 Biblioteca investigativa | 4 |
+| Sensitivity labels | 🧳 Etiqueta inteligente da mala | 4 |
+| DLP e retenção | 🚰 Rede de água e arquivo histórico | 4 |
+| Insider Risk, eDiscovery e Audit | ⚖️ Equipe do tribunal digital | 4 |
 
 > **Ao criar novos módulos, invente analogias NOVAS e igualmente memoráveis.**
 
@@ -622,7 +634,7 @@ Também valide, para cada quiz:
 ### Checklist de cobertura contra o Study Guide
 
 - Não use apenas o roadmap antigo do README como fonte. Consulte a versão e a data dos objetivos oficiais antes de criar ou revisar conteúdo.
-- Registre no README a data-base do blueprint usado. Revisão atual: **skills measured as of November 7, 2025**.
+- Registre no README a data-base do blueprint usado. Revisão atual em **17/07/2026**: objetivos vigentes antes de 28/07/2026, com a próxima versão já publicada pela Microsoft para entrar em vigor nessa data.
 - Faça uma matriz simples “objetivo oficial → aula → questão do quiz” durante a revisão. Um objetivo pode compartilhar uma aula, mas não deve ficar apenas implícito.
 - Dê atenção especial a pares fáceis de confundir: **Entra roles vs Azure RBAC**, **SIEM vs SOAR**, **Defender XDR vs Sentinel**, **CSPM vs workload protection**, **NSG vs Azure Firewall vs WAF** e **governança vs risco vs conformidade**.
 
@@ -697,17 +709,22 @@ As imagens ficam em `assets/modules/module-1/`, usam legendas interpretativas em
 
 **Analogias usadas**: cidade inteligente, inspetor de obras, torre de controle, equipe de detetives, hospital especializado, oficina e mapa do tempo.
 
-### Módulo 4 — Soluções de Conformidade da Microsoft (20–25%)
+### Módulo 4 — Soluções de Conformidade da Microsoft (20–25%) ✅ CONCLUÍDO
 
-**Sub-áreas**:
-- Service Trust Portal (STP) e Microsoft Privacy Statement
-- Microsoft Purview Compliance Portal
-- Compliance Manager
-- Information Protection e Sensitivity Labels
-- Data Lifecycle Management e Records Management
-- Prevenção de Perda de Dados (DLP)
-- eDiscovery
-- Auditoria (Premium)
+**Aulas criadas (6 aulas)**:
+
+1. Service Trust Portal, princípios de privacidade e nota de transição sobre Microsoft Priva.
+2. Microsoft Purview portal, Compliance Manager e compliance score.
+3. Classificação de dados, tipos de informação, Content explorer e Activity explorer.
+4. Sensitivity labels, proteção persistente e label policies.
+5. DLP, retention policies, retention labels e Records Management.
+6. Insider Risk Management, eDiscovery e Audit.
+
+**Cor do módulo**: dourado `#ffb900`.
+
+**Analogias usadas**: cozinha de vidro, painel do avião, biblioteca investigativa, etiqueta de mala, rede de água/arquivo histórico e tribunal digital.
+
+**Blueprint considerado**: objetivos vigentes em 17/07/2026, com aviso sobre a atualização anunciada para 28/07/2026. O novo guia remove Microsoft Priva da lista explícita; os demais grupos de conformidade permanecem.
 
 ---
 

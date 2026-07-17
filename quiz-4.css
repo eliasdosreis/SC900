@@ -1,0 +1,6 @@
+/* SC-900 · Quiz 4 — estilos específicos */
+@import url("quiz-2.css");
+:root { --quiz-accent:#ffb900; --entra-purple:var(--quiz-accent); }
+.q-hero__badge,.quiz-q__topic { color:var(--quiz-accent); }
+.vocab-card > span { display:block; margin:6px 0 8px; color:var(--c-kid); font-size:.86rem; }
+.vocab-card > small { display:block; color:var(--text-faint); font-size:.74rem; font-style:italic; line-height:1.45; }
