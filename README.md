@@ -118,6 +118,19 @@ Arquivos da seção: `ab-900.html`, `ab-900.css` e `ab-900.js`. O `index.html` m
 
 **Analogias novas**: cidade universitária, central postal, estúdio de produção, aeroporto internacional, sala de emergência e projeto/robô instalado.
 
+#### AB-900 · Módulo 02 — Guardiões dos Dados ✅
+
+- Peso oficial: **35–40%**
+- Arquivos: `ab-modulo-2.html/.css/.js` e `ab-quiz-2.html/.css/.js`
+- 6 missões, 6 cenários na Sala de Comando, quiz PT com 6 questões
+- English Exam Mode com 10 questões originais e 16 termos
+- Progresso: `ab900_module2_progress_v1`
+- Estudo ativo: `ab900_module2_active_study_v1`
+
+**Aulas**: Microsoft Purview; classificação, rótulos, DLP e retenção; Copilot, Microsoft Graph, permissões e IA responsável; conformidade e riscos; DSPM for AI e eDiscovery; oversharing e SharePoint Advanced Management.
+
+**Analogias novas**: observatório dos guardiões, alfândega mágica, oráculo que respeita portas, torre de vigia, cartógrafo/investigador e castelo com portões demais.
+
 ---
 
 ## 🧠 A Metodologia "Criança → Sênior"
