@@ -131,6 +131,19 @@ Arquivos da seção: `ab-900.html`, `ab-900.css` e `ab-900.js`. O `index.html` m
 
 **Analogias novas**: observatório dos guardiões, alfândega mágica, oráculo que respeita portas, torre de vigia, cartógrafo/investigador e castelo com portões demais.
 
+#### AB-900 · Módulo 03 — Academia dos Mestres de Agentes ✅
+
+- Peso oficial: **25–30%**
+- Arquivos: `ab-modulo-3.html/.css/.js` e `ab-quiz-3.html/.css/.js`
+- 6 provas, 6 cenários no Conselho dos Agentes e quiz PT com 6 questões
+- English Exam Mode com 10 questões originais e 16 termos
+- Progresso: `ab900_module3_progress_v1`
+- Estudo ativo: `ab900_module3_active_study_v1`
+
+**Aulas**: Copilot, Researcher, Analyst e agentes personalizados; licença mensal e pay-as-you-go; atribuição de licenças e políticas de cobrança; adoção, Analytics e prompts; criação, acesso e aprovação; monitoramento e ciclo de vida nos centros de administração do Microsoft 365 e Power Platform.
+
+**Analogias novas**: guilda de especialistas, estação de duas tarifas, tesouraria dos emblemas, observatório/biblioteca de prompts, forja com conselho de aprovação e torres de vigia do ciclo de vida.
+
 ---
 
 ## 🧠 A Metodologia "Criança → Sênior"
